@@ -1,0 +1,44 @@
+{
+	"react-ts-func": {
+		"prefix": "react-func",
+		"description": "Scaffolds a React TypeScript functional component",
+		"body": [
+			"import React from \"react\"",
+			"",
+			"export const ${1:component}:React.FC = (props) => {",
+			"\treturn (",
+			"\t\t${0}",
+			"\t)",
+			"}",
+			"",
+			"export default ${1}"
+		],
+		"scope": "typescriptreact"
+	},
+	"react-ts-func-stateful": {
+		"prefix": "react-func-state",
+		"description": "Scaffolds a React TypeScript functional component with state hook",
+		"body": [
+			"import React, { useState } from \"react\"",
+			"",
+			"export const ${1:component}:React.FC = (props) => {",
+			"\tconst [${2:state}, set${2}] = useState(${3})",
+			"\treturn (",
+			"\t\t${0}",
+			"\t)",
+			"}",
+			"",
+			"export default ${1}"
+		],
+		"scope": "typescriptreact"
+	},
+	"feature-index": {
+		"prefix": "feature-index",
+		"description": "Scaffolds an index file for a feature that exports the default export of a component",
+		"body": [
+			"import ${1} from \"./${1:component}\"",
+			"export default ${1}"
+		],
+		"scope": "typescript,javascript"
+	}
+}

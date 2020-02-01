@@ -1,0 +1,11 @@
+Day 1:
+------
+Introduction
+
+-Environment-
+Create-React-App
+- Dev server
+- baseUrl
+- Remove unused files
+
+Create Button component that alerts text
