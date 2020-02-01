@@ -5,7 +5,7 @@
 		"body": [
 			"import React from \"react\"",
 			"",
-			"export const ${1:component}:React.FC = (props) => {",
+			"export const ${1:component}:React.FC = () => {",
 			"\treturn (",
 			"\t\t${0}",
 			"\t)",
@@ -15,17 +15,53 @@
 		],
 		"scope": "typescriptreact"
 	},
-	"react-ts-func-stateful": {
+	"react-ts-func-props": {
+		"prefix": "react-func-props",
+		"description": "Scaffolds a React TypeScript functional component with props",
+		"body": [
+			"import React from \"react\"",
+			"",
+			"interface I${1:component}Props {",
+			"\t${0}",
+			"}",
+			"",
+			"export const ${1:component}:React.FC<I${1:component}Props> = (props) => {",
+			"\treturn ()",
+			"}",
+			"",
+			"export default ${1}"
+		],
+		"scope": "typescriptreact"
+	},
+	"react-ts-func-state": {
 		"prefix": "react-func-state",
 		"description": "Scaffolds a React TypeScript functional component with state hook",
 		"body": [
 			"import React, { useState } from \"react\"",
 			"",
-			"export const ${1:component}:React.FC = (props) => {",
+			"export const ${1:component}:React.FC = () => {",
 			"\tconst [${2:state}, set${2}] = useState(${3})",
 			"\treturn (",
 			"\t\t${0}",
 			"\t)",
+			"}",
+			"",
+			"export default ${1}"
+		],
+		"scope": "typescriptreact"
+	},
+	"react-ts-func-propstate": {
+		"prefix": "react-func-propstate",
+		"description": "Scaffolds a React TypeScript functional component with props and state hook",
+		"body": [
+			"import React, { useState } from \"react\"",
+			"",
+			"interface I${1:component}Props {",
+			"\t${0}",
+			"}",
+			"",
+			"export const ${1:component}:React.FC<I${1:component}Props> = (props) => {",
+			"\treturn ()",
 			"}",
 			"",
 			"export default ${1}"

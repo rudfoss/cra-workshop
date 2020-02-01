@@ -1,8 +1,13 @@
 import React, { useState } from "react"
 
-export const Counter: React.FC = (props) => {
-	const [ count, setcount ] = useState(0)
+interface ICounterProps {
+	initialCount?: number
+}
+
+export const Counter: React.FC<ICounterProps> = ({ initialCount }) => {
+	const [ count, setcount ] = useState(initialCount || 0)
 	const [ controlsVisible, setcontrolsVisible ] = useState(true)
+
 	return (
 		<div>
 			<p>{count}</p>
