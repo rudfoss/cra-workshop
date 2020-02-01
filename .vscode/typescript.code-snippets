@@ -32,6 +32,35 @@
 		],
 		"scope": "typescriptreact"
 	},
+	"test-react": {
+		"prefix": "test-react",
+		"description": "Scaffolds a React TypeScript test file for a specific component",
+		"body": [
+			"import React from \"react\"",
+			"import { render } from \"@testing-library/react\"",
+			"import { ${1:component} } from \"./${1}\"",
+			"",
+			"describe(\"${1}\", () => {",
+			"\tit(\"to be defined\", () => {",
+			"\t\texpect(${1}).toBeDefined()",
+			"\t})",
+			"\tit(\"${2:testName}\", () => {",
+			"\t\t${0}",
+			"\t})",
+			"})"
+		],
+		"scope": "typescriptreact"
+	},
+	"test-simple": {
+		"prefix": "test-simple",
+		"description": "Scaffolds a React TypeScript test file for a specific component",
+		"body": [
+			"describe(\"${1:whatToTest}\", () => {",
+			"\t${0}",
+			"})"
+		],
+		"scope": "typescript,javascript,typescriptreact,javascriptreact"
+	},
 	"feature-index": {
 		"prefix": "feature-index",
 		"description": "Scaffolds an index file for a feature that exports the default export of a component",

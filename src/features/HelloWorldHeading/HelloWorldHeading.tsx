@@ -4,9 +4,9 @@ export const HelloWorldHeading: React.FC = (props) => {
 	const [ showHeading, setshowHeading ] = useState(false)
 	return (
 		<div>
-			<h1>{showHeading && "Hello world"}</h1>
+			<h1>{showHeading && "Hello World"}</h1>
 			<button type="button" onClick={() => setshowHeading(true)}>
-				Hello world
+				Click me
 			</button>
 		</div>
 	)
