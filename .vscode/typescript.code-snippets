@@ -38,7 +38,7 @@
 		"body": [
 			"import React from \"react\"",
 			"import { render } from \"@testing-library/react\"",
-			"import { ${1:component} } from \"./${1}\"",
+			"import ${1:component} from \"./\"",
 			"",
 			"describe(\"${1}\", () => {",
 			"\tit(\"to be defined\", () => {",
@@ -51,11 +51,21 @@
 		],
 		"scope": "typescriptreact"
 	},
-	"test-simple": {
-		"prefix": "test-simple",
-		"description": "Scaffolds a React TypeScript test file for a specific component",
+	"test-describe": {
+		"prefix": "test-describe",
+		"description": "Scaffolds a React test file for a specific component",
 		"body": [
 			"describe(\"${1:whatToTest}\", () => {",
+			"\t${0}",
+			"})"
+		],
+		"scope": "typescript,javascript,typescriptreact,javascriptreact"
+	},
+	"test-it": {
+		"prefix": "test-it",
+		"description": "Scaffolds an it function ",
+		"body": [
+			"it(\"${1:doesWhat}\", () => {",
 			"\t${0}",
 			"})"
 		],

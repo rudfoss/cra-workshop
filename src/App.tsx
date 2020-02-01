@@ -1,11 +1,11 @@
 import React from "react"
-import HelloWorldHeading from "features/HelloWorldHeading"
+import Incrementor from "features/Incrementor"
 
 const App: React.FC = () => {
 	return (
 		<div>
 			<h1>React workshop</h1>
-			<HelloWorldHeading />
+			<Incrementor />
 		</div>
 	)
 }
