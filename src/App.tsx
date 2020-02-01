@@ -1,11 +1,11 @@
 import React from "react"
-import Incrementor from "features/Incrementor"
+import Counter from "features/Counter"
 
 const App: React.FC = () => {
 	return (
 		<div>
 			<h1>React workshop</h1>
-			<Incrementor />
+			<Counter />
 		</div>
 	)
 }
