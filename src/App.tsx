@@ -1,11 +1,11 @@
 import React from "react"
-import CounterTree from "features/CounterTree"
+import ItemList from "features/ItemList"
 
 const App: React.FC = () => {
 	return (
 		<div>
 			<h1>React workshop</h1>
-			<CounterTree />
+			<ItemList />
 		</div>
 	)
 }
