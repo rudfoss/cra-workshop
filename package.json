@@ -13,7 +13,8 @@
     "react": "^16.12.0",
     "react-dom": "^16.12.0",
     "react-scripts": "3.3.1",
-    "typescript": "^3.7.5"
+    "typescript": "^3.7.5",
+    "zxcvbn": "^4.4.2"
   },
   "scripts": {
     "start": "react-scripts start",
@@ -37,6 +38,7 @@
     ]
   },
   "devDependencies": {
+    "@types/zxcvbn": "^4.4.0",
     "serve": "^11.3.0"
   }
 }

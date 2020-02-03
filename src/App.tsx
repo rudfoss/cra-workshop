@@ -1,11 +1,11 @@
 import React from "react"
-import ItemList from "features/ItemList"
+import NewUserForm from "features/NewUserForm"
 
 const App: React.FC = () => {
 	return (
 		<div>
 			<h1>React workshop</h1>
-			<ItemList />
+			<NewUserForm />
 		</div>
 	)
 }
