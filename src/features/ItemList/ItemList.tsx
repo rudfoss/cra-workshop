@@ -1,11 +1,5 @@
 import React, { useState } from "react"
-
-const newId = (() => {
-	let id = 0
-	return () => {
-		return id++
-	}
-})()
+import { uid } from "utils"
 
 interface IItem {
 	text: string
@@ -24,7 +18,7 @@ export const ItemList: React.FC = () => {
 		if (evt.key === "Enter") {
 			const newItems = Array.from(items) // Show example without cloning state
 			newItems.push({
-				id: newId(),
+				id: uid(),
 				text: target.value
 			})
 			setitems(newItems)
