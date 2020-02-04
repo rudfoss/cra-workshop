@@ -107,12 +107,11 @@
 		],
 		"scope": "typescript,javascript,typescriptreact,javascriptreact"
 	},
-	"feature-index": {
-		"prefix": "feature-index",
+	"export-default": {
+		"prefix": "export-default",
 		"description": "Scaffolds an index file for a feature that exports the default export of a component",
 		"body": [
-			"import ${1} from \"./${1:component}\"",
-			"export default ${1}"
+			"export { default } from \"./${1:component}\""
 		],
 		"scope": "typescript,javascript"
 	}

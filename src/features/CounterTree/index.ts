@@ -1,2 +1,1 @@
-import CounterTree from "./CounterTree"
-export default CounterTree
+export { default } from "./CounterTree"

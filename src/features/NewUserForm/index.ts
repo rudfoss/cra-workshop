@@ -1,2 +1,1 @@
-import NewUserForm from "./NewUserForm"
-export default NewUserForm
+export { default } from "./NewUserForm"

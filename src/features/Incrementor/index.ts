@@ -1,2 +1,1 @@
-import Incrementor from "./Incrementor"
-export default Incrementor
+export { default } from "./Incrementor"

@@ -1,2 +1,1 @@
-import HelloWorldHeading from "./HelloWorldHeading"
-export default HelloWorldHeading
+export { default } from "./HelloWorldHeading"
