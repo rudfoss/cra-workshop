@@ -15,7 +15,9 @@ export const ItemList: React.FC = () => {
 	}
 	const onNewItemKeyUp = (evt: React.KeyboardEvent) => {
 		const target: HTMLInputElement = evt.target as any
+		const { value } = target
 		if (evt.key === "Enter") {
+			if (value.trim() === "") return
 			const newItems = Array.from(items) // Show example without cloning state
 			newItems.push({
 				id: uid(),
@@ -24,6 +26,10 @@ export const ItemList: React.FC = () => {
 			setitems(newItems)
 			setnewItem("")
 		}
+	}
+
+	if (items.length > 10) {
+		throw new Error("Oops... no more items allowed!")
 	}
 
 	return (
