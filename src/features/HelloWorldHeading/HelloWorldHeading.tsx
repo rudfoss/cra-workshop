@@ -5,7 +5,7 @@ export const HelloWorldHeading: React.FC = (props) => {
 	return (
 		<div>
 			<h1>{showHeading && "Hello World"}</h1>
-			<button type="button" onClick={() => setshowHeading(!showHeading)}>
+			<button className="btn btn-primary" type="button" onClick={() => setshowHeading(!showHeading)}>
 				Click me
 			</button>
 		</div>

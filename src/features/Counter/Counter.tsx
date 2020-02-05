@@ -13,10 +13,15 @@ export const Counter: React.FC<ICounterProps> = ({ initialCount }) => {
 			<p>{count}</p>
 			{controlsVisible && (
 				<React.Fragment>
-					<button disabled={count <= 0} type="button" onClick={() => setcount(count - 1)}>
+					<button className="btn btn-secondary" disabled={count <= 0} type="button" onClick={() => setcount(count - 1)}>
 						Decrement
 					</button>
-					<button disabled={count >= 10} type="button" onClick={() => setcount(count + 1)}>
+					<button
+						className="btn btn-secondary"
+						disabled={count >= 10}
+						type="button"
+						onClick={() => setcount(count + 1)}
+					>
 						Increment
 					</button>
 				</React.Fragment>

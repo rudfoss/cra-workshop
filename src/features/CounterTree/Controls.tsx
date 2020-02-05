@@ -16,10 +16,10 @@ export const Controls: React.FC<IControlsProps> = ({
 }) => {
 	return (
 		<React.Fragment>
-			<button disabled={disableDecrement} type="button" onClick={onDecrement}>
+			<button className="btn btn-secondary" disabled={disableDecrement} type="button" onClick={onDecrement}>
 				Decrement
 			</button>
-			<button disabled={disableIncrement} type="button" onClick={onIncrement}>
+			<button className="btn btn-secondary" disabled={disableIncrement} type="button" onClick={onIncrement}>
 				Increment
 			</button>
 		</React.Fragment>

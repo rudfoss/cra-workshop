@@ -27,7 +27,7 @@ export const CounterTree: React.FC = () => {
 					canDecrement={count <= 0}
 				/>
 			)}
-			<button type="button" onClick={toggleControls}>
+			<button className="btn btn-secondary" type="button" onClick={toggleControls}>
 				Toggle controls
 			</button>
 		</div>
