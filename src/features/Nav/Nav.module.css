@@ -5,6 +5,12 @@
 	left: 0;
 	top: 0;
 	z-index: 99;
+	width: 0;
+	transition: 0.2s width step-end;
+}
+.containerVisible {
+	width: 300px;
+	transition: 0s all linear;
 }
 
 .nav {
@@ -29,4 +35,5 @@
 	background: #fff;
 	border: 1px solid #ccc;
 	z-index: 100;
+	cursor: pointer;
 }
