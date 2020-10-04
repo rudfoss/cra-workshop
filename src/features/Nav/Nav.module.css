@@ -1,0 +1,32 @@
+.container {
+	overflow: hidden;
+	position: absolute;
+	height: 100%;
+	left: 0;
+	top: 0;
+	z-index: 99;
+}
+
+.nav {
+	height: 100%;
+	width: 300px;
+	background: #fff;
+	box-sizing: border-box;
+	border-right: 1px solid #ccc;
+
+	transform: translateX(-300px);
+	transition: 0.2s all ease-out;
+}
+.navVisible{
+	transform: translateX(0px);
+}
+
+.btn {
+	position: absolute;
+	bottom: 5px;
+	left: 5px;
+	padding: 6px;
+	background: #fff;
+	border: 1px solid #ccc;
+	z-index: 100;
+}

@@ -1,15 +1,15 @@
-import React from 'react';
-import './App.css';
-import Incrementor from 'features/Incrementor';
-import Ticker from 'features/Ticker';
+import React from "react"
+import Router from "features/Router"
+import Nav from "features/Nav"
+import { BrowserRouter } from "react-router-dom"
 
 function App() {
   return (
-    <div className="App">
-      <Incrementor limit={10}/>
-      <Ticker message="Hello world, this is a scrolling message"/>
-    </div>
-  );
+    <BrowserRouter>
+      <Nav/>
+      <Router/>
+    </BrowserRouter>
+  )
 }
 
-export default App;
+export default App
