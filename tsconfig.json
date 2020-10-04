@@ -6,7 +6,6 @@
       "dom.iterable",
       "esnext"
     ],
-    "baseUrl": "src", // added to support absolute imports from folder src
     "allowJs": true,
     "skipLibCheck": true,
     "esModuleInterop": true,
