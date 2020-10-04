@@ -1,0 +1,68 @@
+{
+	"react-func": {
+		"prefix": "react-func",
+		"description": "Scaffold a react function",
+		"body": [
+			"import React from \"react\"",
+			"",
+			"export const ${1:Name} = (): JSX.Element => (",
+			"\t(${0})",
+			")",
+			"",
+			"export default ${1}"
+		]
+	},
+	"react-func-state": {
+		"prefix": "react-func-state",
+		"description": "Scaffold a react function with state",
+		"body": [
+			"import React, { useState } from \"react\"",
+			"",
+			"export const ${1:Name} = (): JSX.Element => {",
+			"\tconst [${2:State}, set${2}] = useState(${3})",
+			"\treturn (${0})",
+			"}",
+			"",
+			"export default ${1}"
+		]
+	},
+	"react-func-props": {
+		"prefix": "react-func-props",
+		"description": "Scaffold a react function with props",
+		"body": [
+			"import React from \"react\"",
+			"",
+			"interface ${1:Name}Props {",
+			"}",
+			"",
+			"export const ${1} = (props: ${1}Props): JSX.Element => {",
+			"\treturn (${0})",
+			"}",
+			"",
+			"export default ${1}"
+		]
+	},
+	"react-func-propstate": {
+		"prefix": "react-func-propstate",
+		"description": "Scaffold a react function with props",
+		"body": [
+			"import React, { useState } from \"react\"",
+			"",
+			"interface ${1:Name}Props {",
+			"}",
+			"",
+			"export const ${1} = (props: ${1}Props): JSX.Element => {",
+			"\tconst [${2:State}, set${2}] = useState(${3})",
+			"\treturn (${0})",
+			"}",
+			"",
+			"export default ${1}"
+		]
+	},
+	"export-default": {
+		"prefix": "export-default",
+		"body": [
+			"export { default } from \"./${1:Name}\""
+		]
+	}
+}
