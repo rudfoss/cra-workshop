@@ -1,13 +1,13 @@
 import { waitFor } from "utils/waitFor"
 
-interface Post {
+export interface Post {
 	userId: number
 	id: number
 	title: string
 	body: string
 }
 
-interface User extends Record<string, any> {
+export interface User extends Record<string, any> {
 	id: number
 	name: string
 	username: string
