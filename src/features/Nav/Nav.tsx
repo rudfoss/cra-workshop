@@ -29,7 +29,13 @@ export const Nav = (): JSX.Element => {
 						<Link to="/ticker" onClick={close}>Ticker</Link>
 					</div>
 					<div>
+						<Link to="/ticker/this-is-a-message" onClick={close}>Ticker message</Link>
+					</div>
+					<div>
 						<Link to="/connectedticker" onClick={close}>ConnectedTicker</Link>
+					</div>
+					<div>
+						<Link to="/range/2/42" onClick={close}>Range from url</Link>
 					</div>
 				</nav>
 			</div>

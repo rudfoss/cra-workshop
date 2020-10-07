@@ -5,6 +5,7 @@ import ListPosts from "features/ListPosts"
 import Incrementor from "features/Incrementor"
 import Ticker from "features/Ticker"
 import ConnectedTicker from "features/ConnectedTicker"
+import { RouteTickerMessage, RouteRangeMinMax } from "features/RouteParams"
 
 export const Router = (): JSX.Element => {
 	const { pathname } = useLocation()
@@ -21,12 +22,21 @@ export const Router = (): JSX.Element => {
 			<Route path="/incrementor">
 				<Incrementor limit={10}/>
 			</Route>
+
+			<Route path="/ticker/:message">
+				<RouteTickerMessage/>
+			</Route>
 			<Route path="/ticker">
 				<Ticker message="Hello from the router on the outside" size={6}/>
 			</Route>
 			<Route path="/connectedticker">
 				<ConnectedTicker/>
 			</Route>
+
+			<Route path="/range/:min/:max">
+				<RouteRangeMinMax/>
+			</Route>
+			
 			<Route path="/" exact>
 				<h1>Home</h1>
 			</Route>
