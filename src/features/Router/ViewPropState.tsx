@@ -2,8 +2,8 @@ import React, { useState } from "react"
 import HelloWorld from "features/HelloWorld"
 import Incrementor from "features/Incrementor"
 import Ticker from "features/Ticker"
-import TextInput from "features/TextInput"
-import RangeInput from "features/RangeInput"
+import TextInput from "UI/TextInput"
+import RangeInput from "UI/RangeInput"
 
 export const ViewPropState = (): JSX.Element => {
 	const [tickerSize, setTickerRange] = useState(5)

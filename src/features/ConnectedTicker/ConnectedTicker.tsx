@@ -1,6 +1,6 @@
 import React, { useState } from "react"
-import TextInput from "features/TextInput"
-import RangeInput from "features/RangeInput"
+import TextInput from "UI/TextInput"
+import RangeInput from "UI/RangeInput"
 import Ticker from "features/Ticker"
 
 export const ConnectedTicker = (): JSX.Element => {
