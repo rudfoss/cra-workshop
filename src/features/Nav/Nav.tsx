@@ -31,6 +31,9 @@ export const Nav = (): JSX.Element => {
 					<div>
 						<Link to="/posts/byuser/1" onClick={close}>Posts by user (1)</Link>
 					</div>
+					<div>
+						<Link to="/posts/users" onClick={close}>Users</Link>
+					</div>
 
 					<hr/>
 
