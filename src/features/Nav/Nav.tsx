@@ -19,12 +19,21 @@ export const Nav = (): JSX.Element => {
 					<div>
 						<Link to="/propstate" onClick={close}>PropState</Link>
 					</div>
+
+					<hr/>
+
 					<div>
 						<Link to="/posts/static" onClick={close}>Posts static</Link>
 					</div>
 					<div>
 						<Link to="/posts/async" onClick={close}>Posts async</Link>
 					</div>
+					<div>
+						<Link to="/posts/byuser/1" onClick={close}>Posts by user (1)</Link>
+					</div>
+
+					<hr/>
+
 					<div>
 						<Link to="/incrementor" onClick={close}>Incrementor</Link>
 					</div>

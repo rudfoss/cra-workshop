@@ -26,7 +26,7 @@ export const ListPosts = ({direction = "asc", reverseSort}: ListPostsParams): JS
 	const sortedPosts = useMemo(() => postSorter(direction), [posts, direction])
 
 	if (status === "error") {
-		return <p>{error.message}</p>
+		return <p>Error: {error.message}</p>
 	}
 	if (status !== "success") {
 		return <p>Loading posts...</p>

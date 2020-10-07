@@ -8,6 +8,7 @@ import ConnectedTicker from "features/ConnectedTicker"
 import { RouteTickerMessage, RouteRangeMinMax } from "features/RouteParams"
 import TodoList from "features/TodoList"
 import HeavyForm from "features/HeavyForm"
+import ListPostsByUser from "features/ListPostsByUser"
 
 export const Router = (): JSX.Element => {
 	const { pathname } = useLocation()
@@ -45,6 +46,9 @@ export const Router = (): JSX.Element => {
 			</Route>
 			<Route path="/posts/async">
 				<ListPostsAsync/>
+			</Route>
+			<Route path="/posts/byuser">
+				<ListPostsByUser/>
 			</Route>
 
 			<Route path="/heavy">

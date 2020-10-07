@@ -12,7 +12,7 @@ export const ListPostsRouter = (): JSX.Element => {
 
 	return (
 		<Switch>
-			<Route path={`${path}`} exact>
+			<Route path={path} exact>
 				<Redirect to={`${url}/asc`}/>
 			</Route>
 
