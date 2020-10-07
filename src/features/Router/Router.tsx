@@ -6,6 +6,7 @@ import Incrementor from "features/Incrementor"
 import Ticker from "features/Ticker"
 import ConnectedTicker from "features/ConnectedTicker"
 import { RouteTickerMessage, RouteRangeMinMax } from "features/RouteParams"
+import TodoList from "features/TodoList"
 
 export const Router = (): JSX.Element => {
 	const { pathname } = useLocation()
@@ -15,9 +16,6 @@ export const Router = (): JSX.Element => {
 			<Redirect from="/:url*(/+)" to={pathname.slice(0, -1)} />
 			<Route path="/propstate">
 				<ViewPropState/>
-			</Route>
-			<Route path="/posts/static">
-				<ListPosts/>
 			</Route>
 			<Route path="/incrementor">
 				<Incrementor limit={10}/>
@@ -35,6 +33,14 @@ export const Router = (): JSX.Element => {
 
 			<Route path="/range/:min/:max">
 				<RouteRangeMinMax/>
+			</Route>
+
+			<Route path="/todo">
+				<TodoList/>
+			</Route>
+			
+			<Route path="/posts/static">
+				<ListPosts/>
 			</Route>
 			
 			<Route path="/" exact>

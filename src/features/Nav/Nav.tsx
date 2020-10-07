@@ -37,6 +37,9 @@ export const Nav = (): JSX.Element => {
 					<div>
 						<Link to="/range/2/42" onClick={close}>Range from url</Link>
 					</div>
+					<div>
+						<Link to="/todo" onClick={close}>Todo</Link>
+					</div>
 				</nav>
 			</div>
 			<button className={cls.btn} onClick={() => setVisible(!visible)}>
