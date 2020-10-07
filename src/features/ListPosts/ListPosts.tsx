@@ -1,25 +1,32 @@
-import React, { useState } from "react"
+import React, { useMemo } from "react"
 import posts from "data/posts.json"
 
 const compare = new Intl.Collator(navigator.language).compare
 
-export const ListPosts = (): JSX.Element => {
-	const [sortDirection, setSortDirection] = useState<"normal" | "reverse">("normal")
-	
-	const sortedPosts = posts.sort(
-		(a, b) => sortDirection === "normal"
-			? compare(a.title, b.title)
-			: compare(a.title, b.title) * -1)
+interface ListPostsParams {
+	direction?: "asc" | "desc"
+	reverseSort: () => void
+}
 
-	const switchSortDirection = () => {
-		setSortDirection(sortDirection === "normal" ? "reverse" : "normal")
+const postSorter = (direction: ListPostsParams["direction"]) => {
+	const mutatedPosts = posts.slice()
+	if (direction === "asc") {
+		mutatedPosts.sort((a, b) => compare(a.title, b.title))
+		return mutatedPosts
 	}
+	
+	mutatedPosts.sort((a, b) => compare(b.title, a.title))
+	return mutatedPosts
+}
+
+export const ListPosts = ({direction = "asc", reverseSort}: ListPostsParams): JSX.Element => {
+	const sortedPosts = useMemo(() => postSorter(direction), [direction])
 
 	return (
 		<>
-			<button onClick={switchSortDirection}>{sortDirection}</button>
+			<button onClick={reverseSort}>Reverse</button>
 			<ul>
-				{posts.map((post) => (
+				{sortedPosts.map((post) => (
 					<li key={post.id}>{post.title}</li>
 				))}
 			</ul>
