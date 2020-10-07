@@ -2,6 +2,9 @@ import React from "react"
 import {Switch, Route, Redirect, useLocation} from "react-router-dom"
 import ViewPropState from "./ViewPropState"
 import ListPosts from "features/ListPosts"
+import Incrementor from "features/Incrementor"
+import Ticker from "features/Ticker"
+import ConnectedTicker from "features/ConnectedTicker"
 
 export const Router = (): JSX.Element => {
 	const { pathname } = useLocation()
@@ -14,6 +17,15 @@ export const Router = (): JSX.Element => {
 			</Route>
 			<Route path="/posts/static">
 				<ListPosts/>
+			</Route>
+			<Route path="/incrementor">
+				<Incrementor limit={10}/>
+			</Route>
+			<Route path="/ticker">
+				<Ticker message="Hello from the router on the outside" size={6}/>
+			</Route>
+			<Route path="/connectedticker">
+				<ConnectedTicker/>
 			</Route>
 			<Route path="/" exact>
 				<h1>Home</h1>

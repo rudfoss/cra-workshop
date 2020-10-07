@@ -22,6 +22,15 @@ export const Nav = (): JSX.Element => {
 					<div>
 						<Link to="/posts/static" onClick={close}>Posts static</Link>
 					</div>
+					<div>
+						<Link to="/incrementor" onClick={close}>Incrementor</Link>
+					</div>
+					<div>
+						<Link to="/ticker" onClick={close}>Ticker</Link>
+					</div>
+					<div>
+						<Link to="/connectedticker" onClick={close}>ConnectedTicker</Link>
+					</div>
 				</nav>
 			</div>
 			<button className={cls.btn} onClick={() => setVisible(!visible)}>

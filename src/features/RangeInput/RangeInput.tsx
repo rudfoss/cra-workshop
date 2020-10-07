@@ -1,5 +1,6 @@
 import React from "react"
 import cls from "./RangeInput.module.css"
+import { onInputNumberChange } from "utils/onInputChange"
 
 interface RangeInputProps {
 	id: string
@@ -21,7 +22,7 @@ export const RangeInput = ({id, label, min, max, value, onChange}: RangeInputPro
 			min={min}
 			max={max}
 			value={value}
-			onChange={(evt) => onChange(parseFloat(evt.target.value))}/>
+			onChange={onInputNumberChange(onChange)}/>
 	</div>
 )
 

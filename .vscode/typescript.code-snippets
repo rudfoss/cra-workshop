@@ -64,5 +64,11 @@
 		"body": [
 			"export { default } from \"./${1:Name}\""
 		]
+	},
+	"export-as-default": {
+		"prefix": "export-as-default",
+		"body": [
+			"export { ${1:Name} as default } from \"./${1}\""
+		]
 	}
 }
