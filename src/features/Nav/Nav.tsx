@@ -19,6 +19,9 @@ export const Nav = (): JSX.Element => {
 					<div>
 						<Link to="/propstate" onClick={close}>PropState</Link>
 					</div>
+					<div>
+						<Link to="/posts/static" onClick={close}>Posts static</Link>
+					</div>
 				</nav>
 			</div>
 			<button className={cls.btn} onClick={() => setVisible(!visible)}>

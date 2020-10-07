@@ -29,8 +29,8 @@
 
 .btn {
 	position: absolute;
-	bottom: 5px;
-	left: 5px;
+	top: 5px;
+	right: 5px;
 	padding: 6px;
 	background: #fff;
 	border: 1px solid #ccc;
