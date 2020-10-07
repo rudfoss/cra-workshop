@@ -11,7 +11,6 @@ export const RouteRangeMinMax = (): JSX.Element => {
 			<RangeInput
 				min={parseInt(params.min)}
 				max={parseInt(params.max)}
-				id="from-route"
 				label="From Route"
 				value={range}
 				onChange={setRange}/>

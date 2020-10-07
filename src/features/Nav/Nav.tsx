@@ -40,6 +40,9 @@ export const Nav = (): JSX.Element => {
 					<div>
 						<Link to="/todo" onClick={close}>Todo</Link>
 					</div>
+					<div>
+						<Link to="/heavy" onClick={close}>Heavy</Link>
+					</div>
 				</nav>
 			</div>
 			<button className={cls.btn} onClick={() => setVisible(!visible)}>

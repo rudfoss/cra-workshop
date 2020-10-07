@@ -15,8 +15,8 @@ export const ViewPropState = (): JSX.Element => {
 			<Incrementor limit={10}/>
 			<Ticker message={message} size={tickerSize}/>
 			<div>
-				<TextInput id="message" label="Enter message" value={message} onChange={setMessage}/>
-				<RangeInput id="ticker-size" label="Ticker size" min={1} max={50} value={tickerSize} onChange={setTickerRange}/>
+				<TextInput label="Enter message" value={message} onChange={setMessage}/>
+				<RangeInput label="Ticker size" min={1} max={50} value={tickerSize} onChange={setTickerRange}/>
 			</div>
 		</>
 	)

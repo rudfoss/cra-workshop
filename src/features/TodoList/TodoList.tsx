@@ -2,11 +2,9 @@ import React, { useState } from "react"
 import TextInput from "UI/TextInput"
 import { Todo } from "./types"
 import { onEnter } from "utils/onEnter"
+import { idGenerator } from "utils/idGenerator"
 
-const todoIdGenerator = (() => {
-	let counter = 0
-	return () => `todo_${counter++}`
-})()
+const todoIdGenerator = idGenerator("todo")
 
 export const TodoList = (): JSX.Element => {
 	const [todos, setTodos] = useState<Todo[]>([])
@@ -28,7 +26,6 @@ export const TodoList = (): JSX.Element => {
 	return (
 		<>
 			<TextInput
-				id="todo"
 				label="Todo"
 				value={nextTodo}
 				onChange={setNextTodo}

@@ -9,8 +9,8 @@ export const ConnectedTicker = (): JSX.Element => {
 
 	return (
 		<>
-			<TextInput id="message" value={message} onChange={setMessage} label="Message"/>
-			<RangeInput id="size" value={size} onChange={setSize} label="Size" min={3} max={20}/>
+			<TextInput value={message} onChange={setMessage} label="Message"/>
+			<RangeInput value={size} onChange={setSize} label="Size" min={3} max={20}/>
 			<Ticker message={message} size={size}/>
 		</>
 	)
