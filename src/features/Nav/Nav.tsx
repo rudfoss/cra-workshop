@@ -23,6 +23,9 @@ export const Nav = (): JSX.Element => {
 						<Link to="/posts/static" onClick={close}>Posts static</Link>
 					</div>
 					<div>
+						<Link to="/posts/async" onClick={close}>Posts async</Link>
+					</div>
+					<div>
 						<Link to="/incrementor" onClick={close}>Incrementor</Link>
 					</div>
 					<div>

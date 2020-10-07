@@ -1,7 +1,7 @@
 import React from "react"
 import {Switch, Route, Redirect, useLocation} from "react-router-dom"
 import ViewPropState from "./ViewPropState"
-import ListPosts from "features/ListPosts"
+import ListPosts, { ListPostsAsync } from "features/ListPosts"
 import Incrementor from "features/Incrementor"
 import Ticker from "features/Ticker"
 import ConnectedTicker from "features/ConnectedTicker"
@@ -42,6 +42,9 @@ export const Router = (): JSX.Element => {
 
 			<Route path="/posts/static">
 				<ListPosts/>
+			</Route>
+			<Route path="/posts/async">
+				<ListPostsAsync/>
 			</Route>
 
 			<Route path="/heavy">
