@@ -6,6 +6,7 @@ import { idGenerator } from "utils/idGenerator"
 const newId = idGenerator("rangeInput")
 
 interface RangeInputProps {
+	id?: string
 	label?: string
 	min: number
 	max: number
@@ -14,15 +15,15 @@ interface RangeInputProps {
 	onChange: (newValue: number) => void
 }
 
-export const RangeInput = ({label = "Range", min, max, value, onChange}: RangeInputProps): JSX.Element => {
-	const id = useMemo(() => newId(), [])
+export const RangeInput = ({id, label = "Range", min, max, value, onChange}: RangeInputProps): JSX.Element => {
+	const realId = useMemo(() => id ?? newId(), [id])
 
 	return (
 		<div className={cls.container}>
-			<label htmlFor={id} className={cls.label}>{label}</label>
+			<label htmlFor={realId} className={cls.label}>{label}</label>
 			<input
 				className={cls.input}
-				id={id}
+				id={realId}
 				type="range"
 				min={min}
 				max={max}
