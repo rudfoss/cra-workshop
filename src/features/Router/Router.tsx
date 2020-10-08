@@ -13,6 +13,7 @@ import ListUsers from "features/ListUsers"
 import MessageRouter from "features/MessageRouter"
 import BigBorder from "features/BigBorder"
 import EitherAOrB from "features/EitherAOrB/EitherAOrB"
+import Repeat from "features/Repeat"
 
 export const Router = (): JSX.Element => {
 	const { pathname } = useLocation()
@@ -45,6 +46,9 @@ export const Router = (): JSX.Element => {
 					<p>Big border example</p>
 				</BigBorder>
 				<EitherAOrB a={<p>A</p>} b={<p>B</p>}/>
+				<Repeat>
+					<p>Repeat me</p>
+				</Repeat>
 			</Route>
 			<Route path="/messagerouter">
 				<MessageRouter/>
