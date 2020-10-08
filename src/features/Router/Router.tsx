@@ -6,6 +6,7 @@ import Incrementor from "features/Incrementor"
 import Ticker from "features/Ticker"
 import ConnectedTicker from "features/ConnectedTicker"
 import { RouteTickerMessage, RouteRangeMinMax } from "features/RouteParams"
+import ListMessages from "features/ListMessages"
 
 const TodoList = lazy(() => import("features/TodoList"))
 const HeavyForm = lazy(() => import("features/HeavyForm"))
@@ -51,6 +52,9 @@ export const Router = (): JSX.Element => {
 					<Repeat>
 						<p>Repeat me</p>
 					</Repeat>
+				</Route>
+				<Route path="/listmessages">
+					<ListMessages/>
 				</Route>
 				<Route path="/messagerouter">
 					<MessageRouter/>

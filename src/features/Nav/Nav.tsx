@@ -41,6 +41,9 @@ export const Nav = (): JSX.Element => {
 						<NavLink to="/composition" onClick={close} activeClassName={cls.active}>Composition</NavLink>
 					</div>
 					<div>
+						<NavLink to="/listmessages" onClick={close} activeClassName={cls.active}>List messages</NavLink>
+					</div>
+					<div>
 						<NavLink to="/messagerouter" onClick={close} activeClassName={cls.active}>Message Router</NavLink>
 					</div>
 
