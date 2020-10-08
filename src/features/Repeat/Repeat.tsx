@@ -7,7 +7,7 @@ interface RepeatProps {
 }
 
 export const Repeat = ({count = 3, children}: RepeatProps): JSX.Element => {
-	const newChildren = (new Array(3)).fill(0).map((item, idx) => (
+	const newChildren = (new Array(count)).fill(0).map((item, idx) => (
 		cloneElement(children, {"data-index": idx, key: idx})
 	))
 
