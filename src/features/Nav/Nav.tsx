@@ -46,6 +46,9 @@ export const Nav = (): JSX.Element => {
 					<div>
 						<NavLink to="/messagerouter" onClick={close} activeClassName={cls.active}>Message Router</NavLink>
 					</div>
+					<div>
+						<NavLink to="/delaydisplay" onClick={close} activeClassName={cls.active}>Delay display</NavLink>
+					</div>
 
 					<hr/>
 

@@ -7,6 +7,7 @@ import Ticker from "features/Ticker"
 import ConnectedTicker from "features/ConnectedTicker"
 import { RouteTickerMessage, RouteRangeMinMax } from "features/RouteParams"
 import ListMessages from "features/ListMessages"
+import DelayDisplay from "features/DelayDisplay"
 
 const TodoList = lazy(() => import("features/TodoList"))
 const HeavyForm = lazy(() => import("features/HeavyForm"))
@@ -58,6 +59,9 @@ export const Router = (): JSX.Element => {
 				</Route>
 				<Route path="/messagerouter">
 					<MessageRouter/>
+				</Route>
+				<Route path="/delaydisplay">
+					<DelayDisplay message="I was delayed"/>
 				</Route>
 
 				<Route path="/todo">
