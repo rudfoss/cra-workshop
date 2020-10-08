@@ -23,8 +23,14 @@
 	transform: translateX(-300px);
 	transition: 0.2s all ease-out;
 }
+.nav a, .nav a:active, .nav a:visited{
+	color: inherit;
+}
 .navVisible{
 	transform: translateX(0px);
+}
+.active {
+	font-weight: bold;
 }
 
 .btn {

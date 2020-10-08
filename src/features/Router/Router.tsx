@@ -11,6 +11,8 @@ import HeavyForm from "features/HeavyForm"
 import ListPostsByUser from "features/ListPostsByUser"
 import ListUsers from "features/ListUsers"
 import MessageRouter from "features/MessageRouter"
+import BigBorder from "features/BigBorder"
+import EitherAOrB from "features/EitherAOrB/EitherAOrB"
 
 export const Router = (): JSX.Element => {
 	const { pathname } = useLocation()
@@ -37,6 +39,12 @@ export const Router = (): JSX.Element => {
 
 			<Route path="/range/:min/:max">
 				<RouteRangeMinMax/>
+			</Route>
+			<Route path="/composition">
+				<BigBorder>
+					<p>Big border example</p>
+				</BigBorder>
+				<EitherAOrB a={<p>A</p>} b={<p>B</p>}/>
 			</Route>
 			<Route path="/messagerouter">
 				<MessageRouter/>

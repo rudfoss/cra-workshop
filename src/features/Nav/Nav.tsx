@@ -1,5 +1,5 @@
 import React, { useState } from "react"
-import { Link } from "react-router-dom"
+import { NavLink } from "react-router-dom"
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faBars } from "@fortawesome/free-solid-svg-icons"
 
@@ -14,55 +14,58 @@ export const Nav = (): JSX.Element => {
 			<div className={`${cls.container} ${visible && cls.containerVisible}`}>
 				<nav className={`${cls.nav} ${visible && cls.navVisible}`}>
 					<div>
-						<Link to="/" onClick={close}>Home</Link>
+						<NavLink exact to="/" onClick={close} activeClassName={cls.active}>Home</NavLink>
 					</div>
 					<div>
-						<Link to="/propstate" onClick={close}>PropState</Link>
-					</div>
-
-					<hr/>
-
-					<div>
-						<Link to="/posts/static" onClick={close}>Posts static</Link>
-					</div>
-					<div>
-						<Link to="/posts/async" onClick={close}>Posts async</Link>
-					</div>
-					<div>
-						<Link to="/posts/byuser/1" onClick={close}>Posts by user (1)</Link>
-					</div>
-					<div>
-						<Link to="/posts/users" onClick={close}>Users</Link>
+						<NavLink to="/propstate" onClick={close} activeClassName={cls.active}>PropState</NavLink>
 					</div>
 
 					<hr/>
 
 					<div>
-						<Link to="/messagerouter" onClick={close}>Message Router</Link>
+						<NavLink to="/posts/static" onClick={close} activeClassName={cls.active}>Posts static</NavLink>
+					</div>
+					<div>
+						<NavLink to="/posts/async" onClick={close} activeClassName={cls.active}>Posts async</NavLink>
+					</div>
+					<div>
+						<NavLink to="/posts/byuser/1" onClick={close} activeClassName={cls.active}>Posts by user (1)</NavLink>
+					</div>
+					<div>
+						<NavLink to="/posts/users" onClick={close} activeClassName={cls.active}>Users</NavLink>
 					</div>
 
 					<hr/>
 
 					<div>
-						<Link to="/incrementor" onClick={close}>Incrementor</Link>
+						<NavLink to="/composition" onClick={close} activeClassName={cls.active}>Composition</NavLink>
 					</div>
 					<div>
-						<Link to="/ticker" onClick={close}>Ticker</Link>
+						<NavLink to="/messagerouter" onClick={close} activeClassName={cls.active}>Message Router</NavLink>
+					</div>
+
+					<hr/>
+
+					<div>
+						<NavLink to="/incrementor" onClick={close} activeClassName={cls.active}>Incrementor</NavLink>
 					</div>
 					<div>
-						<Link to="/ticker/this-is-a-message" onClick={close}>Ticker message</Link>
+						<NavLink to="/ticker" onClick={close} activeClassName={cls.active}>Ticker</NavLink>
 					</div>
 					<div>
-						<Link to="/connectedticker" onClick={close}>ConnectedTicker</Link>
+						<NavLink to="/ticker/this-is-a-message" onClick={close} activeClassName={cls.active}>Ticker message</NavLink>
 					</div>
 					<div>
-						<Link to="/range/2/42" onClick={close}>Range from url</Link>
+						<NavLink to="/connectedticker" onClick={close} activeClassName={cls.active}>ConnectedTicker</NavLink>
 					</div>
 					<div>
-						<Link to="/todo" onClick={close}>Todo</Link>
+						<NavLink to="/range/2/42" onClick={close} activeClassName={cls.active}>Range from url</NavLink>
 					</div>
 					<div>
-						<Link to="/heavy" onClick={close}>Heavy</Link>
+						<NavLink to="/todo" onClick={close} activeClassName={cls.active}>Todo</NavLink>
+					</div>
+					<div>
+						<NavLink to="/heavy" onClick={close} activeClassName={cls.active}>Heavy</NavLink>
 					</div>
 				</nav>
 			</div>
