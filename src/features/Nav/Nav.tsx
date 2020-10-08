@@ -38,6 +38,12 @@ export const Nav = (): JSX.Element => {
 					<hr/>
 
 					<div>
+						<Link to="/messagerouter" onClick={close}>Message Router</Link>
+					</div>
+
+					<hr/>
+
+					<div>
 						<Link to="/incrementor" onClick={close}>Incrementor</Link>
 					</div>
 					<div>

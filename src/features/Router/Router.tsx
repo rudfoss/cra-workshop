@@ -10,6 +10,7 @@ import TodoList from "features/TodoList"
 import HeavyForm from "features/HeavyForm"
 import ListPostsByUser from "features/ListPostsByUser"
 import ListUsers from "features/ListUsers"
+import MessageRouter from "features/MessageRouter"
 
 export const Router = (): JSX.Element => {
 	const { pathname } = useLocation()
@@ -36,6 +37,9 @@ export const Router = (): JSX.Element => {
 
 			<Route path="/range/:min/:max">
 				<RouteRangeMinMax/>
+			</Route>
+			<Route path="/messagerouter">
+				<MessageRouter/>
 			</Route>
 
 			<Route path="/todo">
