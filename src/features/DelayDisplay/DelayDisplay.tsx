@@ -11,9 +11,9 @@ export const DelayDisplay = ({message}: DelayDisplayProps): JSX.Element => {
 		setTimeout(() => {
 			setShow(true)
 		}, 5000)
-		return () => {
-			console.log("goodbye")
-		}
+	}, [])
+	useEffect(() => () => {
+		console.log("goodbye")
 	}, [])
 
 	return (
