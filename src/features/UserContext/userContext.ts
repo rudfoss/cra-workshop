@@ -7,4 +7,8 @@ export interface UserContextData {
 
 export const UserContext = createContext<UserContextData>(undefined as any)
 
-export const useUserContext = () => useContext(UserContext)
+export const useUserContext = () => {
+	const userData = useContext(UserContext)
+	if (userData === undefined) throw new Error(`No provider for "UserContext" detected. Did you forget to add it?`)
+	return userData
+}
