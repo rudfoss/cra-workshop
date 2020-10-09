@@ -1,18 +1,18 @@
 import React, { useState } from "react"
 import TextInput from "UI/TextInput"
-import { Todo } from "./types"
 import { onEnter } from "utils/onEnter"
 import { idGenerator } from "utils/idGenerator"
+import { useTodoManager } from "./todoContext"
 
 const todoIdGenerator = idGenerator("todo")
 
 export const TodoList = (): JSX.Element => {
-	const [todos, setTodos] = useState<Todo[]>([])
+	const { todoList, setTodoList } = useTodoManager()
 	const [nextTodo, setNextTodo] = useState("")
 
 	const addTodo = () => {
 		if (nextTodo !== "") {
-			setTodos([...todos, {
+			setTodoList([...todoList, {
 				id: todoIdGenerator(),
 				task: nextTodo
 			}])
@@ -20,7 +20,7 @@ export const TodoList = (): JSX.Element => {
 		}
 	}
 	const removeTodo = (id: string) => () => {
-		setTodos(todos.filter((todo) => todo.id !== id))
+		setTodoList(todoList.filter((todo) => todo.id !== id))
 	}
 
 	return (
@@ -32,7 +32,7 @@ export const TodoList = (): JSX.Element => {
 				inputProps={{onKeyUp: onEnter(addTodo)}}/>
 			<button onClick={addTodo}>Add</button>
 			<ul>
-				{todos.map((todo) => (
+				{todoList.map((todo) => (
 					<li key={todo.id}>
 						{`${todo.id} : ${todo.task}`}
 						<button onClick={removeTodo(todo.id)}>X</button>

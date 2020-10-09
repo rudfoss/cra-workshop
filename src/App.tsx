@@ -6,6 +6,7 @@ import Layout from "features/Layout"
 import { UserContextProvider } from "features/UserContext"
 import { UserContextData } from "features/UserContext/userContext"
 import Footer from "features/Footer"
+import { TodoProvider } from "features/TodoList"
 
 const user: UserContextData = {
   name: "Ola Normann",
@@ -16,10 +17,12 @@ function App() {
   return (
     <BrowserRouter>
       <UserContextProvider userContextData={user}>
-        <Nav/>
-        <Layout footer={<Footer/>}>
-          <Router/>
-        </Layout>
+        <TodoProvider>
+          <Nav/>
+          <Layout footer={<Footer/>}>
+            <Router/>
+          </Layout>
+        </TodoProvider>
       </UserContextProvider>
     </BrowserRouter>
   )

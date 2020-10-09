@@ -2,14 +2,16 @@ import React, { useState } from "react"
 import { NavLink } from "react-router-dom"
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faBars } from "@fortawesome/free-solid-svg-icons"
+import { useUserContext } from "features/UserContext"
+import { useTodos } from "features/TodoList/todoContext"
 
 import cls from "./Nav.module.css"
-import { useUserContext } from "features/UserContext"
 
 export const Nav = (): JSX.Element => {
 	const [visible, setVisible] = useState(false)
 	const close = () => setVisible(false)
 	const { name } = useUserContext()
+	const todos = useTodos()
 
 	return (
 		<>
@@ -74,7 +76,7 @@ export const Nav = (): JSX.Element => {
 						<NavLink to="/range/2/42" onClick={close} activeClassName={cls.active}>Range from url</NavLink>
 					</div>
 					<div>
-						<NavLink to="/todo" onClick={close} activeClassName={cls.active}>Todo</NavLink>
+						<NavLink to="/todo" onClick={close} activeClassName={cls.active}>Todo ({todos.length})</NavLink>
 					</div>
 					<div>
 						<NavLink to="/heavy" onClick={close} activeClassName={cls.active}>Heavy</NavLink>

@@ -1,1 +1,2 @@
-export { TodoList as default } from "./TodoList"
+export { TodoList } from "./TodoList"
+export { TodoProvider } from "./TodoProvider"

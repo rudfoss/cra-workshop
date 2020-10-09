@@ -8,8 +8,8 @@ import ConnectedTicker from "features/ConnectedTicker"
 import { RouteTickerMessage, RouteRangeMinMax } from "features/RouteParams"
 import ListMessages from "features/ListMessages"
 import DelayDisplay from "features/DelayDisplay"
+import { TodoList } from "features/TodoList"
 
-const TodoList = lazy(() => import("features/TodoList"))
 const HeavyForm = lazy(() => import("features/HeavyForm"))
 const ListPostsByUser = lazy(() => import("features/ListPostsByUser"))
 const ListUsers = lazy(() => import("features/ListUsers"))
