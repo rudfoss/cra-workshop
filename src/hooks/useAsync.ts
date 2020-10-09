@@ -18,6 +18,7 @@ export const useAsync = <TResult = any>(asyncFunction: () => Promise<TResult>, i
 			setValue(await asyncFunction())
 			setStatus("success")
 		} catch (error) {
+      setStatus("error")
 			setError(error)
 			setValue(undefined)
 		}
