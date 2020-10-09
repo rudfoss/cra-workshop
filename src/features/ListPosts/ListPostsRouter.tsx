@@ -1,8 +1,8 @@
 import React from "react"
 import { useRouteMatch, Switch, Route, useHistory, Redirect } from "react-router-dom"
-import ListPosts from "./ListPosts"
+import ListPostsAsync from "./ListPosts"
 
-export const ListPostsRouter = (): JSX.Element => {
+export const ListPostsRouterAsync = (): JSX.Element => {
 	const { path, url } = useRouteMatch()
 	const { push } = useHistory()
 
@@ -12,15 +12,15 @@ export const ListPostsRouter = (): JSX.Element => {
 
 	return (
 		<Switch>
-			<Route path={path} exact>
+			<Route path={`${path}`} exact>
 				<Redirect to={`${url}/asc`}/>
 			</Route>
 
 			<Route path={`${path}/asc`}>
-				<ListPosts direction="asc" reverseSort={switchSort("desc")}/>
+				<ListPostsAsync direction="asc" reverseSort={switchSort("desc")}/>
 			</Route>
 			<Route path={`${path}/desc`}>
-				<ListPosts direction="desc" reverseSort={switchSort("asc")}/>
+				<ListPostsAsync direction="desc" reverseSort={switchSort("asc")}/>
 			</Route>
 			<Route>
 				<p>Sorting direction not supported</p>
@@ -29,4 +29,4 @@ export const ListPostsRouter = (): JSX.Element => {
 	)
 }
 
-export default ListPostsRouter
+export default ListPostsRouterAsync

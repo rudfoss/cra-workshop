@@ -1,7 +1,6 @@
 import React, { Suspense, lazy } from "react"
 import {Switch, Route, Redirect, useLocation} from "react-router-dom"
 import ViewPropState from "./ViewPropState"
-import ListPosts, { ListPostsAsync } from "features/ListPosts"
 import Incrementor from "features/Incrementor"
 import Ticker from "features/Ticker"
 import ConnectedTicker from "features/ConnectedTicker"
@@ -17,6 +16,7 @@ const MessageRouter = lazy(() => import("features/MessageRouter"))
 const BigBorder = lazy(() => import("features/BigBorder"))
 const EitherAOrB = lazy(() => import("features/EitherAOrB"))
 const Repeat = lazy(() => import("features/Repeat"))
+const ListPosts = lazy(() => import("features/ListPosts"))
 
 export const Router = (): JSX.Element => {
 	const { pathname } = useLocation()
@@ -68,17 +68,14 @@ export const Router = (): JSX.Element => {
 					<TodoList/>
 				</Route>
 
-				<Route path="/posts/static">
-					<ListPosts/>
-				</Route>
-				<Route path="/posts/async">
-					<ListPostsAsync/>
-				</Route>
 				<Route path="/posts/byuser">
 					<ListPostsByUser/>
 				</Route>
 				<Route path="/posts/users">
 					<ListUsers/>
+				</Route>
+				<Route path="/posts">
+					<ListPosts/>
 				</Route>
 
 				<Route path="/heavy">

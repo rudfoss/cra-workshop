@@ -31,13 +31,10 @@ export const Nav = (): JSX.Element => {
 					<hr/>
 
 					<div>
-						<NavLink to="/posts/static" onClick={close} activeClassName={cls.active}>Posts static</NavLink>
+						<NavLink to="/posts" onClick={close} activeClassName={cls.active}>Posts</NavLink>
 					</div>
 					<div>
-						<NavLink to="/posts/async" onClick={close} activeClassName={cls.active}>Posts async</NavLink>
-					</div>
-					<div>
-						<NavLink to="/posts/byuser/1" onClick={close} activeClassName={cls.active}>Posts by user (1)</NavLink>
+						<NavLink to="/posts/byuser/1" onClick={close} activeClassName={cls.active}>Posts by user 1</NavLink>
 					</div>
 					<div>
 						<NavLink to="/posts/users" onClick={close} activeClassName={cls.active}>Users</NavLink>
