@@ -4,15 +4,21 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faBars } from "@fortawesome/free-solid-svg-icons"
 
 import cls from "./Nav.module.css"
+import { useUserContext } from "features/UserContext"
 
 export const Nav = (): JSX.Element => {
 	const [visible, setVisible] = useState(false)
 	const close = () => setVisible(false)
+	const { name } = useUserContext()
 
 	return (
 		<>
 			<div className={`${cls.container} ${visible && cls.containerVisible}`}>
 				<nav className={`${cls.nav} ${visible && cls.navVisible}`}>
+					<p>Nav: {name}</p>
+					
+					<hr/>
+
 					<div>
 						<NavLink exact to="/" onClick={close} activeClassName={cls.active}>Home</NavLink>
 					</div>
