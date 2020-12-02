@@ -1,4 +1,3 @@
-import React from "react"
 import { useAsync } from "hooks/useAsync"
 import { fetchUsers } from "api/mockApi"
 import { Link } from "react-router-dom"

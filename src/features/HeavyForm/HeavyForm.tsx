@@ -1,4 +1,4 @@
-import React, { useState, useMemo } from "react"
+import { useState, useMemo } from "react"
 import TextInput from "UI/TextInput"
 import RangeInput from "UI/RangeInput"
 import { simulateHeavy } from "utils/simulateHeavy"

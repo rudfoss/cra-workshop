@@ -1,4 +1,3 @@
-import React from "react"
 import { useUserContext } from "features/UserContext"
 
 export const Footer = (): JSX.Element => {

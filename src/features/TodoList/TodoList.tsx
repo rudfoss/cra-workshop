@@ -1,4 +1,4 @@
-import React, { useState } from "react"
+import { useState } from "react"
 import TextInput from "UI/TextInput"
 import { onEnter } from "utils/onEnter"
 import { idGenerator } from "utils/idGenerator"

@@ -1,4 +1,4 @@
-import React, { useState } from "react"
+import { useState } from "react"
 import { useRouteMatch } from "react-router-dom"
 import RangeInput from "UI/RangeInput"
 

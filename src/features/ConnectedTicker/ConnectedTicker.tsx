@@ -1,4 +1,4 @@
-import React, { useState } from "react"
+import { useState } from "react"
 import TextInput from "UI/TextInput"
 import RangeInput from "UI/RangeInput"
 import Ticker from "features/Ticker"

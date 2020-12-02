@@ -1,4 +1,4 @@
-import React, { InputHTMLAttributes, useMemo } from "react"
+import { InputHTMLAttributes, useMemo } from "react"
 import cls from "./TextInput.module.css"
 import { idGenerator } from "utils/idGenerator"
 

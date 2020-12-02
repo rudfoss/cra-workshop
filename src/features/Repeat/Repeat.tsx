@@ -1,4 +1,4 @@
-import React, { cloneElement } from "react"
+import { cloneElement } from "react"
 import cls from "./Repeat.module.css"
 
 interface RepeatProps {

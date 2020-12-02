@@ -1,4 +1,3 @@
-import React from "react"
 import messages from "data/messages.json"
 
 export const ListMessages = (): JSX.Element => {

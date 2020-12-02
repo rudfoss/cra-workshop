@@ -1,4 +1,3 @@
-import React from "react"
 import cls from "./BigBorder.module.css"
 
 interface BigBorderProps {

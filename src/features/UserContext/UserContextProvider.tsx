@@ -1,4 +1,3 @@
-import React from "react"
 import { UserContext, UserContextData } from "./userContext"
 
 interface UserContextProviderProps {

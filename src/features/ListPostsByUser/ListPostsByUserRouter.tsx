@@ -1,4 +1,3 @@
-import React from "react"
 import { useRouteMatch, Switch, Route } from "react-router-dom"
 import ListPostsByUser from "./ListPostsByUser"
 

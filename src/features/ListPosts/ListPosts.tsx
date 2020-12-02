@@ -1,4 +1,4 @@
-import React, { useMemo } from "react"
+import { useMemo } from "react"
 import { useAsync } from "hooks/useAsync"
 import { fetchPosts, Post } from "api/mockApi"
 

@@ -1,4 +1,3 @@
-import React from "react"
 import { useRouteMatch, Switch, Route, useHistory, Redirect } from "react-router-dom"
 import ListPostsAsync from "./ListPosts"
 

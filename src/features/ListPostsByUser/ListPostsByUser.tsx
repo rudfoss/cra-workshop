@@ -1,4 +1,4 @@
-import React, { useCallback } from "react"
+import { useCallback } from "react"
 import { useAsync } from "hooks/useAsync"
 import { fetchPostsByUser } from "api/mockApi"
 import { useRouteMatch } from "react-router-dom"

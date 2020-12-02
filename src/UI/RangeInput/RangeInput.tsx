@@ -1,4 +1,4 @@
-import React, { useMemo } from "react"
+import { useMemo } from "react"
 import cls from "./RangeInput.module.css"
 import { onInputNumberChange } from "utils/onInputChange"
 import { idGenerator } from "utils/idGenerator"

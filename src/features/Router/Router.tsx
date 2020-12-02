@@ -1,4 +1,4 @@
-import React, { Suspense, lazy } from "react"
+import { Suspense, lazy } from "react"
 import {Switch, Route, Redirect, useLocation} from "react-router-dom"
 import ViewPropState from "./ViewPropState"
 import Incrementor from "features/Incrementor"

@@ -1,4 +1,4 @@
-import React, { useState } from "react"
+import { useState } from "react"
 import HelloWorld from "features/HelloWorld"
 import Incrementor from "features/Incrementor"
 import Ticker from "features/Ticker"
