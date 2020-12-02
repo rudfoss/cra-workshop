@@ -6,19 +6,19 @@
       "dom.iterable",
       "esnext"
     ],
-    "baseUrl": "src", // added to support absolute imports from folder src
     "allowJs": true,
     "skipLibCheck": true,
     "esModuleInterop": true,
     "allowSyntheticDefaultImports": true,
     "strict": true,
     "forceConsistentCasingInFileNames": true,
+    "noFallthroughCasesInSwitch": true,
     "module": "esnext",
     "moduleResolution": "node",
     "resolveJsonModule": true,
     "isolatedModules": true,
     "noEmit": true,
-    "jsx": "react"
+    "jsx": "react-jsx"
   },
   "include": [
     "src"
