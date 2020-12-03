@@ -1,5 +1,5 @@
 import { Link, Route, Switch, useRouteMatch } from "react-router-dom"
-import messages from "data/messages.json"
+import messages from "data/messages"
 
 export const MessageRouter = (): JSX.Element => {
 	const { path, url } = useRouteMatch()
