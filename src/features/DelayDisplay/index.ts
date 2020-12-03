@@ -1,0 +1,1 @@
+export { DelayDisplay as default } from "./DelayDisplay"
