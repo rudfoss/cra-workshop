@@ -1,1 +1,0 @@
-export { ConnectedTicker as default } from "./ConnectedTicker"

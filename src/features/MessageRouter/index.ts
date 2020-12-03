@@ -1,1 +1,0 @@
-export { MessageRouter as default } from "./MessageRouter"

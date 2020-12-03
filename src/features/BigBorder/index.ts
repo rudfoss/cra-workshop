@@ -1,1 +1,0 @@
-export { BigBorder as default } from "./BigBorder"
