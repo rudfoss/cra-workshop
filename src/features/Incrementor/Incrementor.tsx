@@ -10,7 +10,8 @@ export const Incrementor = ({limit}: IncrementorProps): JSX.Element => {
 		<>
 			<button onClick={() => setcounter(counter+1)} disabled={counter >= limit}>{counter}</button>
 			{counter >= limit - 2 && (<p>You are almost at the limit</p>)}
-		</>)
+		</>
+	)
 }
 
 export default memo(Incrementor)
