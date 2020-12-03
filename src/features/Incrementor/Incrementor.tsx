@@ -1,20 +1,12 @@
-import React, { useState } from "react"
+import { useState, memo } from "react"
 
-export const Incrementor: React.FC = (props) => {
-	const [ count, setcount ] = useState(0)
-	return (
-		<div>
-			<p>{count}</p>
-			<button
-				type="button"
-				onClick={() => {
-					setcount(count + 1)
-				}}
-			>
-				Increment
-			</button>
-		</div>
-	)
+interface IncrementorProps {
+	limit: number
 }
 
-export default Incrementor
+export const Incrementor = ({limit}: IncrementorProps): JSX.Element => {
+	const [counter, setcounter] = useState(0)
+	return (<button onClick={() => setcounter(counter+1)} disabled={counter >= limit}>{counter}</button>)
+}
+
+export default memo(Incrementor)

@@ -1,0 +1,1 @@
+export { ListPostsByUserRouter as default } from "./ListPostsByUserRouter"

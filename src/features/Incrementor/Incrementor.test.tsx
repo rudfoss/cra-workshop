@@ -1,27 +1,20 @@
-import React from "react"
 import { render, fireEvent } from "@testing-library/react"
-import Incrementor from "./"
+import { Incrementor } from "./Incrementor"
 
 describe("Incrementor", () => {
-	it("to be defined", () => {
-		expect(Incrementor).toBeDefined()
+	it("should be a react component", () => {
+		expect(typeof Incrementor).toBe("function")
 	})
-	it("has an increment button", () => {
-		const { getByText } = render(<Incrementor />)
-		expect(getByText(/Increment/)).toBeInTheDocument()
+	it("should render a button", () => {
+		const { getByRole } = render(<Incrementor limit={10}/>)
+		const button = getByRole("button")
+		expect(button).toBeInTheDocument()
 	})
-	it("renders the initial count", () => {
-		const { queryByText } = render(<Incrementor />)
-		expect(queryByText(/0/)).toBeInTheDocument()
-	})
-	it("shows the correct count when clicked", () => {
-		const { queryByText, getByText } = render(<Incrementor />)
-		const incrementElement = getByText(/Increment/)
-
-		fireEvent.click(incrementElement)
-		fireEvent.click(incrementElement)
-		fireEvent.click(incrementElement)
-
-		expect(queryByText("3")).toBeInTheDocument()
+	it("should increment counter when button is clicked", () => {
+		const { getByRole } = render(<Incrementor limit={10}/>)
+		const button = getByRole("button")
+		expect(button).toBeInTheDocument()
+		fireEvent.click(button)
+		expect(button.textContent).toBe("1")
 	})
 })
