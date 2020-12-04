@@ -61,6 +61,9 @@ export const Nav = (): JSX.Element => {
 						<NavLink to="/incrementor" onClick={close} activeClassName={cls.active}>Incrementor</NavLink>
 					</div>
 					<div>
+						<NavLink to="/incrementor/42" onClick={close} activeClassName={cls.active}>Incrementor (limit 42)</NavLink>
+					</div>
+					<div>
 						<NavLink to="/ticker" onClick={close} activeClassName={cls.active}>Ticker</NavLink>
 					</div>
 					<div>

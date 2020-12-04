@@ -1,7 +1,7 @@
 import { Suspense, lazy } from "react"
 import {Switch, Route, Redirect, useLocation} from "react-router-dom"
 import ViewPropState from "./ViewPropState"
-import Incrementor from "features/Incrementor"
+import Incrementor, { IncrementorRoute } from "features/Incrementor"
 import Ticker from "features/Ticker"
 import ConnectedTicker from "features/ConnectedTicker"
 import { RouteTickerMessage, RouteRangeMinMax } from "features/RouteParams"
@@ -27,6 +27,9 @@ export const Router = (): JSX.Element => {
 				<Redirect from="/:url*(/+)" to={pathname.slice(0, -1)} />
 				<Route path="/propstate">
 					<ViewPropState/>
+				</Route>
+				<Route path="/incrementor/:limit">
+					<IncrementorRoute />
 				</Route>
 				<Route path="/incrementor">
 					<Incrementor limit={10}/>
