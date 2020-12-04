@@ -12,6 +12,14 @@ export const Nav = (): JSX.Element => {
 	const close = () => setVisible(false)
 	const { name } = useUserContext()
 	const todos = useTodos()
+	const userContext = useUserContext()
+
+	const onLogin = () => {
+		userContext.login({
+			name: "Ola Normann",
+			email: "ola@norge.no"
+		})
+	}
 
 	return (
 		<>
@@ -80,6 +88,9 @@ export const Nav = (): JSX.Element => {
 					</div>
 					<div>
 						<NavLink to="/heavy" onClick={close} activeClassName={cls.active}>Heavy</NavLink>
+					</div>
+					<div>
+						<button onClick={onLogin}>Login</button>
 					</div>
 				</nav>
 			</div>

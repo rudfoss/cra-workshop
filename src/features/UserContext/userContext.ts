@@ -1,8 +1,11 @@
 import { createContext, useContext } from "react"
 
-export interface UserContextData {
+export interface UserData {
 	name: string
 	email: string
+}
+interface UserContextData extends Partial<UserData> {
+	login: (userData: UserData) => void
 }
 
 export const UserContext = createContext<UserContextData>(undefined as any)

@@ -1,14 +1,22 @@
-import { UserContext, UserContextData } from "./userContext"
+import { useState } from "react"
+import { UserContext, UserData } from "./userContext"
 
 interface UserContextProviderProps {
-	userContextData: UserContextData
 	children: React.ReactNode
 }
 
-export const UserContextProvider = ({userContextData, children}: UserContextProviderProps): JSX.Element => (
-	<UserContext.Provider value={userContextData}>
+export const UserContextProvider = ({children}: UserContextProviderProps): JSX.Element => {
+	const [userData, setUserData] = useState<UserData>()
+
+	const login = (userData: UserData) => {
+		setUserData(userData)
+	}
+
+	return (
+	<UserContext.Provider value={{...userData, login}}>
 		{children}
 	</UserContext.Provider>
 )
+	}
 
 export default UserContextProvider

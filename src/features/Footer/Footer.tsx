@@ -4,7 +4,7 @@ export const Footer = (): JSX.Element => {
 	const { email } = useUserContext()
 	return (
 		<p>
-			React kurs - {email}
+			React kurs - {email ?? "not logged in"}
 		</p>
 	)
 }
