@@ -11,4 +11,4 @@ Most tools on this list is recommendations, and you should be able to follow alo
 1. NodeJS (LTS version is recommended) [https://nodejs.org/en/](https://nodejs.org/en/)
 2. [Git](https://git-scm.com/)
 3. Visual Studio Code [https://code.visualstudio.com/](https://code.visualstudio.com/)
-4. React Developer Tools for your browser [Edge/Brave/Chrome](https://chrome.google.com/webstore/detail/react-developer-tools/fmkadmapgofadopljbjfkapdkoienihi?hl=en) [Firefox](https://addons.mozilla.org/en-US/firefox/addon/react-devtools/)
+4. React Developer Tools for your browser [Edge/Brave/Chrome](https://chrome.google.com/webstore/detail/react-developer-tools/fmkadmapgofadopljbjfkapdkoienihi?hl=en)/[Firefox](https://addons.mozilla.org/en-US/firefox/addon/react-devtools/)
