@@ -11,7 +11,7 @@ export const ViewPropState = (): JSX.Element => {
 
 	return (
 		<>
-			<HelloWorld/>
+			<HelloWorld name="Per Gunnar" greeting="Hi"/>
 			<Incrementor limit={10}/>
 			<Ticker message={message} size={tickerSize}/>
 			<div>
