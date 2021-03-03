@@ -9,6 +9,7 @@ Prerequisites:
 - [Node.js > v10](https://nodejs.org/en/) (recommend latest LTS version)
 - [Visual Studio Code](https://code.visualstudio.com/) (or another IDE if you prefer)
 - [Git](https://git-scm.com/)
+- React Developer Tools Extension, [Firefox](https://addons.mozilla.org/en-US/firefox/addon/react-devtools/), [Chrome](https://chrome.google.com/webstore/detail/react-developer-tools/fmkadmapgofadopljbjfkapdkoienihi?hl=en), [Edge Chromium](https://microsoftedge.microsoft.com/addons/detail/react-developer-tools/gpphkfbcpidddadnkolkpfckpihlkkil)
 
 Optional:
 
