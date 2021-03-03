@@ -1,10 +1,6 @@
 import logo from './logo.svg';
 import './App.css';
-
-import StateExample from './StateExample';
-
-// import FirstComponent from "./FirstComponent"
-// import HelloWorld from './HelloWorld';
+import Incrementor from './Incrementor';
 
 function App() {
   return (
@@ -14,7 +10,7 @@ function App() {
         <p>
           Modify <code>src/App.tsx</code> and save to reload.
         </p>
-        <StateExample/>
+        <Incrementor limit={20}/>
       </header>
     </div>
   );
