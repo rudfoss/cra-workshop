@@ -1,0 +1,10 @@
+{
+	"Default export": {
+		"prefix": "export-default",
+		"description": "Exports the default export from another module",
+		"body": [
+			"export { default } from \"./${1:Name}\""
+		],
+		"scope": "typescript"
+	}
+}

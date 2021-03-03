@@ -1,5 +1,5 @@
 import './App.css';
-import Repeat from './Repeat';
+import Repeat from 'tasks/Repeat';
 
 function App() {
   return (

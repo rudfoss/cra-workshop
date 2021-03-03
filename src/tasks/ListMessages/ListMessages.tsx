@@ -1,5 +1,5 @@
 import React from "react"
-import { messageObj, messages } from "./messages"
+import { messageObj, messages } from "data/messages"
 
 interface ListMessagesProps {
 	children: React.ReactNode
