@@ -1,8 +1,10 @@
-import React from 'react';
 import logo from './logo.svg';
 import './App.css';
 
-import FirstComponent from "./FirstComponent"
+import StateExample from './StateExample';
+
+// import FirstComponent from "./FirstComponent"
+// import HelloWorld from './HelloWorld';
 
 function App() {
   return (
@@ -12,7 +14,7 @@ function App() {
         <p>
           Modify <code>src/App.tsx</code> and save to reload.
         </p>
-        <FirstComponent name="Thomas" greeting="Goodbye"/>
+        <StateExample/>
       </header>
     </div>
   );
