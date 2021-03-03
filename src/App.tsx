@@ -1,11 +1,15 @@
 import './App.css';
-import LoopExample from './LoopExample';
+import Repeat from './Repeat';
 
 function App() {
   return (
     <div className="App">
       <header className="App-header">
-        <LoopExample/>
+        <Repeat count={10}>
+          <Repeat count={3}>
+            <p style={{fontWeight: "bold"}}>This is the end of the list</p>
+          </Repeat>
+        </Repeat>
       </header>
     </div>
   );
