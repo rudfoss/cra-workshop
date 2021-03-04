@@ -7,14 +7,15 @@ interface TextInputProps {
 	label: string
 	value: string
 	onChange: (newValue: string) => unknown
+	inputProps?: React.InputHTMLAttributes<HTMLInputElement>
 }
 
-export const TextInput = ({ label, value, onChange }: TextInputProps) => {
+export const TextInput = ({ label, value, onChange, inputProps = {} }: TextInputProps) => {
 	const id = useMemo(() => idGenerator("textInput"), [])
 	return (
 		<div className={classes.container}>
 			<label htmlFor={id}>{label}</label>
-			<input id={id} type="text" value={value} onChange={onChangeHelper(onChange)}/>
+			<input {...inputProps} id={id} type="text" value={value} onChange={onChangeHelper(onChange)}/>
 		</div>
 	)
 }

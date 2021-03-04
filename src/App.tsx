@@ -1,12 +1,12 @@
 import "normalize.css/normalize.css";
 import "./App.css";
-import ConnectedTicker from "tasks/ConnectedTicker";
+import TodoList from "tasks/TodoList";
 
 function App() {
   return (
     <div className="App">
       <header className="App-header">
-        <ConnectedTicker />
+        <TodoList/>
       </header>
     </div>
   );
