@@ -1,12 +1,16 @@
 import "normalize.css/normalize.css";
 import "./App.css";
-import TodoList from "tasks/TodoList";
+import CompositionExample from "tasks/CompositionExample";
+import Incrementor from "tasks/Incrementor";
 
 function App() {
   return (
     <div className="App">
       <header className="App-header">
-        <TodoList/>
+        <CompositionExample
+          a="this is the value of a"
+          b={<p>This is a paragraph in b</p>}
+          c={<Incrementor limit={100}/>}/>
       </header>
     </div>
   );
