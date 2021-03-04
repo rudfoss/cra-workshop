@@ -29,7 +29,6 @@ export const RangeInput = ({
 				onChange={onChangeNumericHelper(onChange)}
 				/>
 		</div>
-
 	)
 }
 
