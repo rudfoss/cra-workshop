@@ -1,0 +1,6 @@
+nav a {
+	display: block;
+}
+nav a.active {
+	font-weight: bold;
+}

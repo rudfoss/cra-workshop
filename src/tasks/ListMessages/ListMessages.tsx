@@ -1,11 +1,7 @@
 import React from "react"
 import { messageObj, messages } from "data/messages"
 
-interface ListMessagesProps {
-	children: React.ReactNode
-}
-
-export const ListMessages = ({children}: ListMessagesProps) => (
+export const ListMessages = () => (
 	<>
 		<ul>
 			{messages.map((message, idx) => <li key={idx} data-id={idx}>{message}</li>)}
@@ -17,7 +13,6 @@ export const ListMessages = ({children}: ListMessagesProps) => (
 						<li key={key} data-id={key}>{value}</li>
 					)
 			}
-			<li>{children}</li>
 		</ul>
 	</>
 )
