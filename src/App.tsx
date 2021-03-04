@@ -1,11 +1,14 @@
 import './App.css';
-import TextInputExample from 'tasks/TextInputExample';
+import Repeat from 'tasks/Repeat';
+import Incrementor from 'tasks/Incrementor';
 
 function App() {
   return (
     <div className="App">
       <header className="App-header">
-        <TextInputExample/>
+        <Repeat count={2}>
+          <Incrementor limit={10}/>
+        </Repeat>
       </header>
     </div>
   );

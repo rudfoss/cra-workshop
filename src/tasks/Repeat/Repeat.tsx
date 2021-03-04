@@ -9,7 +9,7 @@ export const Repeat = ({ count, children }: RepeatProps) => {
 	const newChildren: React.ReactElement[] = []
 	for (let i=0; i<count; i++) {
 		newChildren.push(
-			React.cloneElement(children, { "data-index": i })
+			React.cloneElement(children, { "data-index": i, key: i })
 		)
 	}
 
