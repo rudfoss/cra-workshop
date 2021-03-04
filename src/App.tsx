@@ -1,26 +1,18 @@
 import "normalize.css/normalize.css";
+import EitherAOrB from "tasks/EitherAOrB";
+import HelloWorld from "tasks/HelloWorld";
+import Incrementor from "tasks/Incrementor";
 import "./App.css";
-import BigBorder from "UI/BigBorder";
-import { useState } from "react";
-import { RangeInput } from "UI/RangeInput/RangeInput";
 
 function App() {
-  const [borderSize, setBorderSize] = useState(5)
-
   return (
     <div className="App">
       <header className="App-header">
         
-        <RangeInput
-          min={1}
-          max={100}
-          value={borderSize}
-          onChange={setBorderSize}
-          label="Border size"/> 
-
-        <BigBorder borderSize={borderSize}>
-          <p>This is bordered</p>
-        </BigBorder>
+        <EitherAOrB
+          a={<Incrementor/>}
+          b={<HelloWorld name="Incognito"/>}
+          />
 
       </header>
     </div>
