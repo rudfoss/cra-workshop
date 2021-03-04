@@ -1,13 +1,5 @@
 import React, { useState } from "react"
-
-const onChangeHelper = (setter: any) => (evt: React.ChangeEvent<HTMLInputElement>) => {
-	setter(evt.target.value)
-}
-// const onChangeHelper = (setter: any) => {
-// 	return (evt: React.ChangeEvent<HTMLInputElement>) => {
-// 		setter(evt.target.value)
-// 	}
-// }
+import { onChangeHelper } from "utils/onChangeHelper"
 
 interface TextInputExampleProps {
 	
