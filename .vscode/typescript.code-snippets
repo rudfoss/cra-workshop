@@ -7,7 +7,7 @@
 		],
 		"scope": "typescript"
 	},
-	"Component": {
+	"React Component": {
 		"prefix": "react-component",
 		"description": "Scaffolds a React component with props",
 		"body": [
