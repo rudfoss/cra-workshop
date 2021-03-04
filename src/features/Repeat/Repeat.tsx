@@ -3,10 +3,10 @@ import cls from "./Repeat.module.css"
 
 interface RepeatProps {
 	count?: number
-	children: JSX.Element
+	children: React.ReactElement
 }
 
-export const Repeat = ({count = 3, children}: RepeatProps): JSX.Element => {
+export const Repeat = ({count = 3, children}: RepeatProps) => {
 	const newChildren = (new Array(count)).fill(0).map((item, idx) => (
 		cloneElement(children, {"data-index": idx, key: idx})
 	))
