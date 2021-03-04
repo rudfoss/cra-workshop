@@ -1,21 +1,21 @@
 import "normalize.css/normalize.css";
-import EitherAOrB from "tasks/EitherAOrB";
-import HelloWorld from "tasks/HelloWorld";
-import Incrementor from "tasks/Incrementor";
 import "./App.css";
+import { BrowserRouter, NavLink } from "react-router-dom"
+import BaseRoute from "routes";
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        
-        <EitherAOrB
-          a={<Incrementor/>}
-          b={<HelloWorld name="Incognito"/>}
-          />
-
-      </header>
-    </div>
+    <BrowserRouter>
+      <div className="App">
+        <header className="App-header">
+          <nav>
+            <NavLink to="/" exact>Home</NavLink>
+            <NavLink to="/article/one">Article one</NavLink>
+          </nav>
+          <BaseRoute/>
+        </header>
+      </div>
+    </BrowserRouter>
   );
 }
 

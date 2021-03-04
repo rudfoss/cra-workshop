@@ -2,6 +2,10 @@
   text-align: center;
 }
 
+nav a.active {
+  color: hotpink;
+}
+
 .App-logo {
   height: 40vmin;
   pointer-events: none;
