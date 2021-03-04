@@ -5,10 +5,12 @@
 export const onChangeHelper = (setter: (value: string) => void) => (evt: React.ChangeEvent<HTMLInputElement>) => {
 	setter(evt.target.value)
 }
-
-
 // const onChangeHelper = (setter: any) => {
 // 	return (evt: React.ChangeEvent<HTMLInputElement>) => {
 // 		setter(evt.target.value)
 // 	}
 // }
+
+export const onChangeNumericHelper = (setter: (value: number) => void) => (evt: React.ChangeEvent<HTMLInputElement>) => {
+	setter(parseInt(evt.target.value))
+}
