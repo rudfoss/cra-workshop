@@ -7,6 +7,7 @@ import BigBorder from "UI/BigBorder"
 import ArticleExample from "./ArticleExample"
 
 import { MessageViewerRoute } from "tasks/MessageViewer"
+import UseEffectExample from "tasks/UseEffectExample"
 
 export const BaseRoute = () => {
 	return (
@@ -23,6 +24,7 @@ export const BaseRoute = () => {
 			</Route>
 
 			<Route path="/incrementor">
+				<UseEffectExample/>
 				<Incrementor/>
 			</Route>
 			<Route path="/bigBorder">
