@@ -22,6 +22,7 @@ export const Nav = () => {
 			<NavLink to="/eitherAOrB" activeClassName={classes.active}>EitherAOrB</NavLink>
 			<NavLink to="/todoList" activeClassName={classes.active}>TodoList ({todoList.length})</NavLink>
 			<NavLink to="/delayDisplay" activeClassName={classes.active}>DelayDisplay</NavLink>
+			<NavLink to="/asyncExample" activeClassName={classes.active}>AsyncExample</NavLink>
 			<hr/>
 			{!name && (<button onClick={onLoginClick}>Login</button>)}
 			{name && (<button onClick={logout}>Log out</button>)}

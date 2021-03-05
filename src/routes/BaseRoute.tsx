@@ -9,6 +9,7 @@ import ArticleExample from "./ArticleExample"
 import { MessageViewerRoute } from "tasks/MessageViewer"
 import UseEffectExample from "tasks/UseEffectExample"
 import DelayDisplay from "tasks/DelayDisplay"
+import AsyncExample from "tasks/AsyncExample"
 
 export const BaseRoute = () => {
 	return (
@@ -41,6 +42,9 @@ export const BaseRoute = () => {
 			</Route>
 			<Route path="/delayDisplay">
 				<DelayDisplay message="Hello world"/>
+			</Route>
+			<Route path="/asyncExample">
+				<AsyncExample/>
 			</Route>
 
 			<Route path="/" exact>
