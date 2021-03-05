@@ -6,6 +6,8 @@ import TodoList from "tasks/TodoList"
 import BigBorder from "UI/BigBorder"
 import ArticleExample from "./ArticleExample"
 
+import { MessageViewerRoute } from "tasks/MessageViewer"
+
 export const BaseRoute = () => {
 	return (
 		<Switch>
@@ -13,11 +15,15 @@ export const BaseRoute = () => {
 				<ArticleExample/>
 			</Route>
 
+			<Route path="/message/:messageId">
+				<MessageViewerRoute />
+			</Route>
+			<Route path="/message">
+				<ListMessages/>
+			</Route>
+
 			<Route path="/incrementor">
 				<Incrementor/>
-			</Route>
-			<Route path="/listMessages">
-				<ListMessages/>
 			</Route>
 			<Route path="/bigBorder">
 				<BigBorder borderSize={10}>

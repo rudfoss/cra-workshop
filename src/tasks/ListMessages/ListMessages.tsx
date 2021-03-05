@@ -1,5 +1,5 @@
-import React from "react"
 import { messageObj, messages } from "data/messages"
+import { Link } from "react-router-dom"
 
 export const ListMessages = () => (
 	<>
@@ -10,7 +10,9 @@ export const ListMessages = () => (
 			{
 				Object.entries(messageObj)
 					.map(([key, value]) =>
-						<li key={key} data-id={key}>{value}</li>
+						<li key={key} data-id={key}>
+							<Link to={`/message/${key}`}>{key}</Link>
+						</li>
 					)
 			}
 		</ul>
