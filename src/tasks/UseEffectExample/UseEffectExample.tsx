@@ -5,7 +5,7 @@ interface UseEffectExampleProps {
 	
 }
 
-export const UseEffectExample = ({}: UseEffectExampleProps) => {
+export const UseEffectExample = () => {
 	const { counter } = useContextExample()
 
 	useEffect(() => {

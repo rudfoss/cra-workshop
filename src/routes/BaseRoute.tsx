@@ -10,6 +10,7 @@ import { MessageViewerRoute } from "tasks/MessageViewer"
 import UseEffectExample from "tasks/UseEffectExample"
 import DelayDisplay from "tasks/DelayDisplay"
 import AsyncExample from "tasks/AsyncExample"
+import { ListPostsRoute } from "tasks/ListPosts"
 
 export const BaseRoute = () => {
 	return (
@@ -45,6 +46,13 @@ export const BaseRoute = () => {
 			</Route>
 			<Route path="/asyncExample">
 				<AsyncExample/>
+			</Route>
+			
+			<Route path="/posts/:sortOrder">
+				<ListPostsRoute />
+			</Route>
+			<Route path="/posts">
+				<ListPostsRoute />
 			</Route>
 
 			<Route path="/" exact>
