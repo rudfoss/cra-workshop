@@ -1,7 +1,6 @@
-nav a {
+.menu a {
 	display: block;
-	color: #fff;
 }
-nav a.active {
+.active {
 	font-weight: bold;
 }
