@@ -1,5 +1,6 @@
 nav a {
 	display: block;
+	color: #fff;
 }
 nav a.active {
 	font-weight: bold;
