@@ -1,25 +1,16 @@
 import React, { useState } from "react"
 import { TextInput } from "UI/TextInput/TextInput"
-import { idGenerator } from "utils/idGenerator"
-import { TodoItem } from "./TodoListCtx"
+import { useTodoListCtx } from "./TodoListCtx"
 
 export const TodoList = () => {
+	const { todoList, addTodo, removeTodoById } = useTodoListCtx()
 	const [nextTodoValue, setNextTodoValue] = useState("")
-	const [todoList, setTodoList] = useState<TodoItem[]>([])
 
 	const onAddTodo = () => {
 		if (nextTodoValue.trim() === "") {
 			return
 		}
-
-		const newTodoList: TodoItem[] = [
-			{
-				id: idGenerator("todoItem"),
-				text: nextTodoValue
-			},
-			...todoList
-		]
-		setTodoList(newTodoList)
+		addTodo(nextTodoValue)
 		setNextTodoValue("")
 	}
 	const onEnterPress = (evt: React.KeyboardEvent) => {
@@ -28,8 +19,7 @@ export const TodoList = () => {
 		}
 	}
 	const removeTodoItem = (id: string) => () => {
-		const newTodoList = todoList.filter((todoItem) => todoItem.id !== id)
-		setTodoList(newTodoList)
+		removeTodoById(id)
 	}
 
 	return (

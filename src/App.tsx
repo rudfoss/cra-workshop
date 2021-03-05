@@ -6,15 +6,18 @@ import Layout from "tasks/Layout";
 import ContextExample from "tasks/ContextExample";
 import Footer from "tasks/Footer";
 import UserContext from "tasks/UserContext";
+import { TodoListProvider } from "tasks/TodoList";
 
 function App() {
   return (
     <BrowserRouter>
       <ContextExample>
         <UserContext>
-          <Layout nav={<Nav/>} footer={<Footer/>}>
-            <BaseRoute/>
-          </Layout>
+          <TodoListProvider>
+            <Layout nav={<Nav/>} footer={<Footer/>}>
+              <BaseRoute/>
+            </Layout>
+          </TodoListProvider>
         </UserContext>
       </ContextExample>
     </BrowserRouter>

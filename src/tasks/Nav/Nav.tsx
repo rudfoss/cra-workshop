@@ -1,10 +1,12 @@
 import { NavLink } from "react-router-dom";
 import { useContextExample } from "tasks/ContextExample";
+import { useTodoListCtx } from "tasks/TodoList";
 import { useUserContext } from "tasks/UserContext";
 import classes from  "./Nav.module.css"
 
 export const Nav = () => {
 	const { name, login, logout } = useUserContext()
+	const { todoList } = useTodoListCtx()
 	const { counter } = useContextExample()
 
 	const onLoginClick = () => {
@@ -18,7 +20,7 @@ export const Nav = () => {
 			<NavLink to="/message" activeClassName={classes.active}>ListMessages</NavLink>
 			<NavLink to="/bigBorder" activeClassName={classes.active}>BigBorder</NavLink>
 			<NavLink to="/eitherAOrB" activeClassName={classes.active}>EitherAOrB</NavLink>
-			<NavLink to="/todoList" activeClassName={classes.active}>TodoList</NavLink>
+			<NavLink to="/todoList" activeClassName={classes.active}>TodoList ({todoList.length})</NavLink>
 			<hr/>
 			{!name && (<button onClick={onLoginClick}>Login</button>)}
 			{name && (<button onClick={logout}>Log out</button>)}
