@@ -1,14 +1,14 @@
 import React from 'react';
 import logo from './logo.svg';
 import './App.css';
-import { Incrementor } from './Incrementor';
+import { Ticker } from './Ticker';
 
 function App() {
   return (
     <div className="App">
       <header className="App-header">
         <img src={logo} className="App-logo" alt="logo" />
-        <Incrementor limit={50} warningText="Close..."/>
+        <Ticker message="Hello world, this is a ticker"/>
       </header>
     </div>
   );
