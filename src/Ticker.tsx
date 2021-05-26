@@ -1,4 +1,5 @@
 import { useState } from "react"
+import cls from "./Ticker.module.css"
 
 interface TickerProps {
 	message: string
@@ -17,7 +18,7 @@ export const Ticker = (props: TickerProps) => {
 
 	return (
 		<div>
-			<pre style={{border: "1px solid #ccc"}}>
+			<pre className={cls.frame}>
 				<code>{paddedMessage.substr(position, windowSize)}</code>
 			</pre>
 			<button onClick={scrollWindow}>
