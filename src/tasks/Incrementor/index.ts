@@ -1,0 +1,1 @@
+export { Incrementor as default } from "./Incrementor"

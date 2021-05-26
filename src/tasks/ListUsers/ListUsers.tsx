@@ -1,4 +1,4 @@
-import { users } from "./users"
+import { users } from "data/users"
 
 export const ListUsers = () => {
 	return (

@@ -1,12 +1,12 @@
 import React from 'react';
 import './App.css';
-import { ListUsers } from './ListUsers';
+import Task from 'tasks/ListUsers';
 
 function App() {
   return (
     <div className="App">
       <header className="App-header">
-        <ListUsers />
+        <Task />
       </header>
     </div>
   );
