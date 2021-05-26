@@ -1,14 +1,12 @@
 import React from 'react';
-import logo from './logo.svg';
 import './App.css';
-import { Ticker } from './Ticker';
+import { LoopExample } from './LoopExample';
 
 function App() {
   return (
     <div className="App">
       <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <Ticker message="Hello world, this is a ticker"/>
+        <LoopExample/>
       </header>
     </div>
   );
