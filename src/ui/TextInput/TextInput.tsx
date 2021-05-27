@@ -6,16 +6,23 @@ interface TextInputProps {
 	label: string
 	value: string
 	onChange: (newValue: string, evt: React.ChangeEvent<HTMLInputElement>) => void
+
+	onEnterKey?: () => void
 }
 
 const newId = idGenerator("textInput_")
 
 export const TextInput = (props: TextInputProps) => {
-	const { label, value, onChange } = props
+	const { label, value, onChange, onEnterKey } = props
 	const id = useMemo(newId, [])
 
 	const onInputChange = (evt: React.ChangeEvent<HTMLInputElement>) => {
 		onChange(evt.target.value, evt)
+	}
+	const onEnterKeyEvent = (evt: React.KeyboardEvent<HTMLInputElement>) => {
+		if (evt.key === "Enter" && onEnterKey) {
+			onEnterKey()
+		}
 	}
 
 	return (
@@ -26,7 +33,8 @@ export const TextInput = (props: TextInputProps) => {
 				id={id}
 				type="text"
 				value={value}
-				onChange={onInputChange} />
+				onChange={onInputChange}
+				onKeyUp={onEnterKeyEvent} />
 		</div>
 	)
 }

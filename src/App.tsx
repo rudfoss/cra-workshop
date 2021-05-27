@@ -1,5 +1,5 @@
 import React from 'react';
-import ConnectedTicker from 'tasks/ConnectedTicker';
+import TodoList from 'tasks/TodoList';
 import './App.css';
 // import Task from 'tasks/Repeat';
 
@@ -7,7 +7,7 @@ function App() {
   return (
     <div className="App" >
       <header className="App-header">
-        <ConnectedTicker/>
+        <TodoList />
       </header>
     </div>
   );
