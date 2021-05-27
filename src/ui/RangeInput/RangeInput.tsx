@@ -1,8 +1,8 @@
-import React from "react"
+import React, { useMemo } from "react"
+import { idGenerator } from "utils/idGenerator"
 import cls from "./RangeInput.module.css"
 
 interface RangeInputProps {
-	id: string
 	label: string
 	min: number
 	max: number
@@ -11,8 +11,11 @@ interface RangeInputProps {
 	onChange: (newValue: number) => unknown
 }
 
+const newId = idGenerator("rangeInput_")
+
 export const RangeInput = (props: RangeInputProps) => {
-	const { id, label, min, max, value, onChange } = props
+	const { label, min, max, value, onChange } = props
+	const id = useMemo(newId, [])
 
 	const onRangeChange = (evt: React.ChangeEvent<HTMLInputElement>) => {
 		onChange(evt.target.valueAsNumber)

@@ -1,15 +1,18 @@
-import React from "react"
+import React, { useMemo } from "react"
+import { idGenerator } from "utils/idGenerator"
 import cls from "./TextInput.module.css"
 
 interface TextInputProps {
-	id: string
 	label: string
 	value: string
 	onChange: (newValue: string, evt: React.ChangeEvent<HTMLInputElement>) => void
 }
 
+const newId = idGenerator("textInput_")
+
 export const TextInput = (props: TextInputProps) => {
-	const { id, label, value, onChange } = props
+	const { label, value, onChange } = props
+	const id = useMemo(newId, [])
 
 	const onInputChange = (evt: React.ChangeEvent<HTMLInputElement>) => {
 		onChange(evt.target.value, evt)
