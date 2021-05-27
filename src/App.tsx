@@ -1,13 +1,13 @@
 import React from 'react';
 import './App.css';
-import Task from 'tasks/BigBorder';
+import Task from 'tasks/Repeat';
 
 function App() {
   return (
     <div className="App" >
       <header className="App-header">
-        <Task size={32} id="my-div">
-          <h2>With border</h2>
+        <Task count={7}>
+          <h2 data-index="bar">With border</h2>
         </Task>
       </header>
     </div>
