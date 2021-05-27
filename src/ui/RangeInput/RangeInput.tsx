@@ -35,3 +35,5 @@ export const RangeInput = (props: RangeInputProps) => {
 		</div>
 	)
 }
+
+export default React.memo(RangeInput)

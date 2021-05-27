@@ -1,1 +1,1 @@
-export { RangeInput as default } from "./RangeInput"
+export { default } from "./RangeInput"
