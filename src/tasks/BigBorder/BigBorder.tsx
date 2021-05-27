@@ -1,6 +1,6 @@
 import React from "react"
 
-interface BigBorderProps extends React.DetailedHTMLProps<React.HTMLAttributes<HTMLDivElement>, HTMLDivElement> {
+export interface BigBorderProps extends React.DetailedHTMLProps<React.HTMLAttributes<HTMLDivElement>, HTMLDivElement> {
 	footer?: React.ReactNode
 	
 	/**
