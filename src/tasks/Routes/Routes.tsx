@@ -1,7 +1,6 @@
 import { Route, Switch } from "react-router-dom"
 import ConnectedTicker from "tasks/ConnectedTicker"
 import ListUsers from "tasks/ListUsers"
-import { UserDetails } from "tasks/ListUsers/UserDetails"
 import { ConnetedTickerRoute } from "./ConnectedTickerRoute"
 import { EitherAOrBRoute } from "./EitherAOrBRoute"
 import { UserDetailsRoute } from "./UserDetailsRoute"
