@@ -2,6 +2,7 @@ import { Route, Switch } from "react-router-dom"
 import ConnectedTicker from "tasks/ConnectedTicker"
 import ListUsers from "tasks/ListUsers"
 import TodoList from "tasks/TodoList"
+import UseEffectTest from "tasks/UseEffectTest"
 import { ConnetedTickerRoute } from "./ConnectedTickerRoute"
 import { EitherAOrBRoute } from "./EitherAOrBRoute"
 import { UserDetailsRoute } from "./UserDetailsRoute"
@@ -12,6 +13,7 @@ export const Routes = () => {
 			<Route path="/" exact>
 				<h1>Hello</h1>
 				<p>This is the home page</p>
+				<UseEffectTest />
 			</Route>
 			<Route path="/aorb">
 				<EitherAOrBRoute/>
