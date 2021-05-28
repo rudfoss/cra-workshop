@@ -3,8 +3,12 @@ import Ticker from "tasks/Ticker"
 import RangeInput from "ui/RangeInput"
 import TextInput from "ui/TextInput"
 
-export const ConnectedTicker = () => {
-	const [message, setMessage] = useState("")
+interface ConnectedTickerProps {
+	msg?: string
+}
+
+export const ConnectedTicker = ({msg = ""}: ConnectedTickerProps) => {
+	const [message, setMessage] = useState(msg)
 	const [windowSize, setWindowSize] = useState(5)
 
 	return (
