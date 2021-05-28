@@ -1,6 +1,6 @@
 import { Route, Switch } from "react-router-dom"
-import { ControlledBigBorder } from "tasks/BigBorder"
-import EitherAOrB from "tasks/EitherAOrB"
+import ConnectedTicker from "tasks/ConnectedTicker"
+import { EitherAOrBRoute } from "./EitherAOrBRoute"
 
 export const Routes = () => {
 	return (
@@ -10,13 +10,10 @@ export const Routes = () => {
 				<p>This is the home page</p>
 			</Route>
 			<Route path="/aorb">
-				<EitherAOrB
-					a={
-						<ControlledBigBorder footer={<p>I am the footer</p>}>
-							<h2>This is inside a border</h2>
-						</ControlledBigBorder>
-					}
-					b={<p>Nothing to see here...</p>}/>
+				<EitherAOrBRoute/>
+			</Route>
+			<Route path="/ticker">
+				<ConnectedTicker />
 			</Route>
 			<Route>
 				<h2>Ooops... this path does not exist</h2>
