@@ -1,30 +1,27 @@
 import { useState } from "react"
 import { TextInput } from "ui/TextInput/TextInput"
 import { idGenerator } from "utils/idGenerator"
+import { useTodoContext } from "./todoContext"
 
 const newId = idGenerator("todoItem_")
 
-interface TodoItem {
-	id: string
-	text: string
-}
 
 export const TodoList = () => {
 	const [nextTodo, setNextTodo] = useState("")
-	const [todoList, setTodoList] = useState<TodoItem[]>([])
+	const {todos, setTodos} = useTodoContext()
 
 	const onAddTodo = () => {
-		const newTodoList = todoList.slice()
+		const newTodoList = todos.slice()
 		newTodoList.push({
 			id: newId(),
 			text: nextTodo
 		})
-		setTodoList(newTodoList)
+		setTodos(newTodoList)
 		setNextTodo("")
 	}
 	const removeTodoById = (id: string) => () => {
-		const newTodoList = todoList.filter((item) => item.id !== id)
-		setTodoList(newTodoList)
+		const newTodoList = todos.filter((item) => item.id !== id)
+		setTodos(newTodoList)
 	}
 
 	return (
@@ -46,7 +43,7 @@ export const TodoList = () => {
 					</tr>
 				</thead>
 				<tbody>
-					{todoList.map((todoItem) => (
+					{todos.map((todoItem) => (
 						<tr key={todoItem.id}>
 							<td>{todoItem.id}</td>
 							<td>{todoItem.text}</td>
