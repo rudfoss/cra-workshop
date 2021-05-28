@@ -9,6 +9,7 @@ export const Nav = () => {
 		<ul className={cls.menu}>
 			<li><NavLink to="/" exact activeClassName={cls.active}>Home</NavLink></li>
 			<li><NavLink to="/aorb" activeClassName={cls.active}>A or B</NavLink></li>
+			<li><NavLink to="/delayDisplay" activeClassName={cls.active}>Delay Display</NavLink></li>
 			<li><NavLink to="/ticker" activeClassName={cls.active}>Ticker</NavLink></li>
 			<li><NavLink to="/users" activeClassName={cls.active}>Users</NavLink></li>
 			<li><NavLink to="/todo" activeClassName={cls.active}>Todo ({todos.length})</NavLink></li>
