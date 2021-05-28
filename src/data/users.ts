@@ -232,3 +232,12 @@ export const users = [
 ]
 
 export type User = (typeof users)[number]
+
+export const fetchUsers = async (): Promise<User[]> => {
+	const response = await fetch("http://jsonplaceholder.typicode.com/users")
+	if (!response.ok) {
+		throw new Error("Something went wrong")
+	}
+
+	return response.json()
+}
