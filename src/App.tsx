@@ -5,15 +5,18 @@ import Nav from 'tasks/Nav';
 import Layout from 'tasks/Layout';
 import { Footer } from 'Footer';
 import { ContextExampleProvider } from 'tasks/ContextExample';
+import { UserContextProvider } from 'tasks/UserContext';
 
 function App() {
   return (
     <BrowserRouter>
-      <ContextExampleProvider initialName="Test">
-        <Layout nav={<Nav />} footer={<Footer />}>
-          <Routes />
-        </Layout>
-      </ContextExampleProvider>
+      <UserContextProvider>
+        <ContextExampleProvider initialName="Test">
+          <Layout nav={<Nav />} footer={<Footer />}>
+            <Routes />
+          </Layout>
+        </ContextExampleProvider>
+      </UserContextProvider>
     </BrowserRouter>
   );
 }

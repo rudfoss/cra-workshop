@@ -1,11 +1,10 @@
-import { useContextExample } from "tasks/ContextExample"
-import { TextInput } from "ui/TextInput/TextInput"
+import { useUserContext } from "tasks/UserContext"
 
 export const Footer = () => {
-	const {name, setName} = useContextExample()
+	const {email, isAuthenticated} = useUserContext()	
 	return (
 		<div>
-			<TextInput value={name} onChange={setName} label="Your name" />
+			<p>Footer - {isAuthenticated ? email : "not logged in"}</p>
 		</div>
 	)
 }
