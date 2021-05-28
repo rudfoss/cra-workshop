@@ -1,13 +1,15 @@
 import { User } from "data/users"
+import { useContextExample } from "tasks/ContextExample"
 
 type UserDetailsProps = User
 
 export const UserDetails = (props: UserDetailsProps) => {
 	const {name, username, email, phone, website, company} = props
+	const contextExample = useContextExample()
 
 	return (
 		<div>
-			<h1>{name}</h1>
+			<h1>{name} ({contextExample.name})</h1>
 			<table>
 				<tbody>
 					<tr>

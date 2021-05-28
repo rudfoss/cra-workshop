@@ -1,15 +1,19 @@
-import React from 'react';
+import React  from 'react';
 import { BrowserRouter } from "react-router-dom"
 import Routes from 'tasks/Routes';
 import Nav from 'tasks/Nav';
 import Layout from 'tasks/Layout';
+import { Footer } from 'Footer';
+import { ContextExampleProvider } from 'tasks/ContextExample';
 
 function App() {
   return (
     <BrowserRouter>
-      <Layout nav={<Nav />} footer={<p>Footer</p>}>
-        <Routes />
-      </Layout>
+      <ContextExampleProvider initialName="Test">
+        <Layout nav={<Nav />} footer={<Footer />}>
+          <Routes />
+        </Layout>
+      </ContextExampleProvider>
     </BrowserRouter>
   );
 }
