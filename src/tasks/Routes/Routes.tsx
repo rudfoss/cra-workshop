@@ -1,4 +1,5 @@
 import { Route, Switch } from "react-router-dom"
+import AsyncExample from "tasks/AsyncExample"
 import ConnectedTicker from "tasks/ConnectedTicker"
 import DelayDisplay from "tasks/DelayDisplay"
 import ListUsers from "tasks/ListUsers"
@@ -18,6 +19,9 @@ export const Routes = () => {
 			</Route>
 			<Route path="/aorb">
 				<EitherAOrBRoute/>
+			</Route>
+			<Route path="/albums">
+				<AsyncExample />
 			</Route>
 			<Route path="/delayDisplay">
 				<DelayDisplay message="Delayed message" />
