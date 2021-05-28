@@ -230,3 +230,5 @@ export const users = [
     }
   }
 ]
+
+export type User = (typeof users)[number]

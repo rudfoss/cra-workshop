@@ -1,4 +1,5 @@
 import { users } from "data/users"
+import { Link } from "react-router-dom"
 
 export const ListUsers = () => {
 	return (
@@ -14,7 +15,7 @@ export const ListUsers = () => {
 				{users.map((user) => (
 					<tr key={user.id} data-id={user.id}>
 						<td>{user.id}</td>
-						<td>{user.name}</td>
+						<td><Link to={`/users/${user.id}`}>{user.name}</Link></td>
 						<td>{user.email}</td>
 					</tr>
 				))}

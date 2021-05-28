@@ -1,7 +1,10 @@
 import { Route, Switch } from "react-router-dom"
 import ConnectedTicker from "tasks/ConnectedTicker"
+import ListUsers from "tasks/ListUsers"
+import { UserDetails } from "tasks/ListUsers/UserDetails"
 import { ConnetedTickerRoute } from "./ConnectedTickerRoute"
 import { EitherAOrBRoute } from "./EitherAOrBRoute"
+import { UserDetailsRoute } from "./UserDetailsRoute"
 
 export const Routes = () => {
 	return (
@@ -18,6 +21,12 @@ export const Routes = () => {
 			</Route>
 			<Route path="/ticker">
 				<ConnectedTicker />
+			</Route>
+			<Route path="/users/:id">
+				<UserDetailsRoute />
+			</Route>
+			<Route path="/users">
+				<ListUsers />
 			</Route>
 			<Route>
 				<h2>Ooops... this path does not exist</h2>
