@@ -1,0 +1,15 @@
+.container {
+	display: flex;
+}
+
+.nav {
+	flex: 0 0 150px;
+}
+
+.main {
+	padding-left: 8px;
+}
+
+.footer {
+
+}

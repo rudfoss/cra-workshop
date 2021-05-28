@@ -1,4 +1,13 @@
-.active {
-	font-weight: bold;
-	font-size: 2rem;
+.menu {
+	list-style: none;
+	padding: 8px;
+	margin: 0;
+}
+
+.menu a {
+	text-decoration: none;
+}
+
+.menu a.active {
+	text-decoration: underline;
 }
